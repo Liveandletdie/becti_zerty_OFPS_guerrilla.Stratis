@@ -61,4 +61,12 @@ switch (_action) do {
 			createDialog "CTI_RscArtilleryMenu";
 		};
 	};
+	case "onConstructionCamPressed": {
+		//_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
+		if (CTI_Base_HQInRange && call CTI_CL_FNC_IsPlayerCommander) then {
+		//if (CTI_Base_HQInRange) then {
+			closeDialog 0;
+			createDialog "CTI_RscBuildMenu_Tablet";
+		};
+	};
 };

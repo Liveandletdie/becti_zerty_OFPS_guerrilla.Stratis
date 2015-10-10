@@ -389,7 +389,7 @@ CTI_BASE_AREA_RANGE = 150;
 CTI_BASE_CONSTRUCTION_DECAY_TIMEOUT = 300; //--- Decay starts after x seconds unattended.
 CTI_BASE_CONSTRUCTION_DECAY_DELAY = 10; //--- Decay each x seconds.
 CTI_BASE_CONSTRUCTION_DECAY_FROM = 10; //--- Decay of x / 100 each y seconds.
-CTI_BASE_CONSTRUCTION_RANGE = 250; //--- Determine how far the commander may be from the HQ to build
+CTI_BASE_CONSTRUCTION_RANGE = CTI_BASE_AREA_RANGE; //--- Determine how far the commander may be from the HQ to build
 CTI_BASE_CONSTRUCTION_RATIO_INIT = 1; //--- The initial construction ratio
 CTI_BASE_CONSTRUCTION_RATIO_ON_DEATH = 0.60; //--- The completion ratio is multiplied by this coefficient to make repairs less effective at each factory's destruction.
 
@@ -527,6 +527,8 @@ CTI_RESPAWN_MOBILE_RANGE = 1000;
 
 CTI_SATCAM_ZOOM_MIN = 25;
 CTI_SATCAM_ZOOM_MAX = 800;
+CTI_CONSTRUCTIONCAM_ZOOM_MIN = 5;
+CTI_CONSTRUCTIONCAM_ZOOM_MAX = 54;
 
 CTI_SERVICE_PRICE_REPAIR = 0;
 CTI_SERVICE_PRICE_REPAIR_COEF = 0;

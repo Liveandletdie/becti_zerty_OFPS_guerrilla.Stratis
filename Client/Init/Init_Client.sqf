@@ -42,6 +42,8 @@ CTI_CL_FNC_OnStructureConstructed = compileFinal preprocessFile "Client\Function
 CTI_CL_FNC_OnTownCaptured = compileFinal preprocessFile "Client\Functions\Client_OnTownCaptured.sqf";
 CTI_CL_FNC_PurchaseUnit = compileFinal preprocessFile "Client\Functions\Client_PurchaseUnit.sqf";
 CTI_CL_FNC_RemoveRuins = compileFinal preprocessFile "Client\Functions\Client_RemoveRuins.sqf";
+CTI_CL_FNC_ConstructionCam_PlacingBuilding = compileFinal preprocessFile "Client\Functions\Client_ConstructionCam_PlacingBuilding.sqf";
+CTI_CL_FNC_ConstructionCam_PlacingDefense = compileFinal preprocessFile "Client\Functions\Client_ConstructionCam_PlacingDefense.sqf";
 
 TUTORIAL_RUN = compileFinal preprocessFile "Addons\Strat_mode\Functions\TUTORIAL_run.sqf";
 
@@ -79,9 +81,11 @@ CTI_P_RapidDefence=-1;
 CTI_P_Coloration_Money = "#BAFF81";
 CTI_P_Locks=[];
 CTI_P_Interaction=false;
-CTI_DIALOGS=["cti_dialog_ui_interractions","cti_dialog_ui_tabletmain","cti_dialog_ui_buildmenu","cti_dialog_ui_videosettingsmenu","cti_dialog_ui_transferresourcesmenu","cti_dialog_ui_servicemenu","cti_dialog_ui_purchasemenu","cti_dialog_ui_upgrademenu","cti_dialog_ui_workersmenu","cti_dialog_ui_defensemenu","cti_dialog_ui_requestmenu","cti_dialog_ui_onlinehelpmenu","cti_dialog_ui_gear","cti_dialog_ui_satcam","cti_dialog_ui_unitscam","cti_dialog_ui_teamsmenu","cti_dialog_ui_mapcommandmenu","cti_dialog_ui_aimicromenu","cti_dialog_ui_artillerymenu","cti_dialog_ui_aircraftloadoutmenu"];
+CTI_DIALOGS=["cti_dialog_ui_interractions","cti_dialog_ui_tabletmain","cti_dialog_ui_buildmenu","cti_dialog_ui_constructioncam","cti_dialog_ui_videosettingsmenu","cti_dialog_ui_transferresourcesmenu","cti_dialog_ui_servicemenu","cti_dialog_ui_purchasemenu","cti_dialog_ui_upgrademenu","cti_dialog_ui_workersmenu","cti_dialog_ui_defensemenu","cti_dialog_ui_requestmenu","cti_dialog_ui_onlinehelpmenu","cti_dialog_ui_gear","cti_dialog_ui_satcam","cti_dialog_ui_unitscam","cti_dialog_ui_teamsmenu","cti_dialog_ui_mapcommandmenu","cti_dialog_ui_aimicromenu","cti_dialog_ui_artillerymenu","cti_dialog_ui_aircraftloadoutmenu"];
 CTI_TABLET_DIALOG="cti_dialog_ui_tabletmain";
 HUD_NOTIFICATIONS=[];
+CTI_CMDR_BuildCam = true; //-- Used in Action_BuildMenu
+CTI_ConstructionCam_DownwardAngle = -0.8;
 
 //--- Artillery Computer is only enabled on demand
 enableEngineArtillery true;
@@ -110,6 +114,7 @@ call compile preprocessFile "Client\Functions\UI\Functions_UI_AIMicromanagementM
 call compile preprocessFile "Client\Functions\UI\Functions_UI_ArtilleryMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_GearMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_KeyHandlers.sqf";
+call compile preprocessFile "Client\Functions\UI\Functions_UI_ConstructionKeyHandlers.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_MapCommanding.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_PurchaseMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_RequestMenu.sqf";
@@ -233,7 +238,7 @@ TABLET_KEY_DOWN={
 	_return=false;
 	disableSerialization;
 
-	if (! (_this select 2) && ! (_this select 3) && ! (_this select 4) &&(_this select 1) in ([(profilenamespace getvariable ['CTI_TABLET_KEY',41])]+(actionKeys "User5"))  && !visibleMap && !CTI_P_PreBuilding &&!CTI_P_Repairing && isNull (uiNamespace getVariable ['cti_dialog_ui_interractions',objNull]) && isNull (uiNamespace getVariable ['cti_dialog_ui_defensemenu',objnull]) && isNull (uiNamespace getVariable ['cti_dialog_ui_purchasemenu',objnull]) && isnull (uiNamespace getVariable ["cti_dialog_ui_tabletmain",objnull]) && (isnull (findDisplay 60490))) then {
+	if (! (_this select 2) && ! (_this select 3) && ! (_this select 4) &&(_this select 1) in ([(profilenamespace getvariable ['CTI_TABLET_KEY',41])]+(actionKeys "User5"))  && !visibleMap && !CTI_P_PreBuilding &&!CTI_P_Repairing && isNull (uiNamespace getVariable ['cti_dialog_ui_interractions',objNull]) && isNull (uiNamespace getVariable ['cti_dialog_ui_defensemenu',objnull]) && isNull (uiNamespace getVariable ['cti_dialog_ui_purchasemenu',objnull]) && isnull (uiNamespace getVariable ["cti_dialog_ui_tabletmain",objnull]) && isnull (uiNamespace getVariable ["cti_dialog_ui_constructioncam",objnull]) && (isnull (findDisplay 60490))) then {
 			uiNamespace setVariable ["INT_TARG", call TABLET_GET_TARGET];
 			createdialog "CTI_RscInteraction";
 			_return=true;
@@ -243,7 +248,7 @@ TABLET_KEY_DOWN={
 TABLET_KEY_UP={
 	_return=false;
 	disableSerialization;
-	if (! (_this select 2) && ! (_this select 3) && ! (_this select 4) && (_this select 1) in [(profilenamespace getvariable ['CTI_TABLET_KEY',41])]  && !isNil {uiNamespace getVariable 'cti_dialog_ui_interractions'}&& isNil {uiNamespace getVariable 'cti_dialog_ui_purchasemenu'} && isNil {uiNamespace getVariable 'cti_dialog_ui_buildmenu'} && isNil {uiNamespace getVariable 'cti_dialog_ui_defensemenu'}&& isNil {uiNamespace getVariable 'cti_dialog_ui_gear'}&& isNil {uiNamespace getVariable 'cti_dialog_ui_aircraftloadoutmenu'} && isnil {uiNamespace getVariable "cti_dialog_ui_tabletmain"} && (isnull (findDisplay 60490)) ) then {
+	if (! (_this select 2) && ! (_this select 3) && ! (_this select 4) && (_this select 1) in [(profilenamespace getvariable ['CTI_TABLET_KEY',41])]  && !isNil {uiNamespace getVariable 'cti_dialog_ui_interractions'}&& isNil {uiNamespace getVariable 'cti_dialog_ui_purchasemenu'} && isNil {uiNamespace getVariable 'cti_dialog_ui_buildmenu'} && isNil {uiNamespace getVariable 'cti_dialog_ui_defensemenu'}&& isNil {uiNamespace getVariable 'cti_dialog_ui_gear'}&& isNil {uiNamespace getVariable 'cti_dialog_ui_aircraftloadoutmenu'} && isnil {uiNamespace getVariable "cti_dialog_ui_tabletmain"} && isnil {uiNamespace getVariable "cti_dialog_ui_constructioncam"} && (isnull (findDisplay 60490)) ) then {
 		closeDialog 0;
 	};
 	_return
