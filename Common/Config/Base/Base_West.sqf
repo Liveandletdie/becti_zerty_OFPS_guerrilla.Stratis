@@ -15,6 +15,7 @@ missionNamespace setVariable [format["CTI_%1_Base_Template", _side], [
 
 //--- Commander course of action ["Action", Parameter(s), Condition]
 missionNamespace setVariable [format["CTI_%1_Commander_Path", _side], [
+	["build-structures", CTI_MILITARYINSTALLATION, {true}],
 	["build-structures", CTI_BARRACKS, {true}],
 	["build-structures", CTI_LIGHT, {true}],
 	["build-structures", CTI_CONTROLCENTER, {true}],
@@ -53,6 +54,12 @@ _times = [];
 _placements = [];
 _specials = [];
 
+_headers = _headers 		+ [[CTI_MILITARYINSTALLATION, "Military Installation", "Military Installation"]];
+_classes =  _classes 		+ [["Land_Cargo_Tower_V3_F", "Land_Cargo_Tower_V3_ruins_F"]];
+_prices =  _prices 			+ [CTI_MILITARY_INSTALLATION_PRICE];
+_times =  _times 			+ [1];
+_placements =_placements 	+ [[180, 15]];
+_specials = _specials		+ [[["DMG_Reduce", 6]]];
 
 _headers = _headers 		+ [[CTI_BARRACKS, "Barracks", "Barracks"]];
 _classes = _classes 		+ [["Land_Cargo_House_V1_F", "Land_Cargo_House_V1_ruins_F"]];

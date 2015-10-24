@@ -1927,11 +1927,19 @@ class CTI_RscTabletWorkersMenu {
 		class CTI_Menu_Control_Sell : CTI_Menu_Control_Disband {
 			idc = 260004;
 
-			y = "SafeZoneY+safezoneH*(0.590+0.005+0.04)";
+			y = "SafeZoneY+safezoneH*(0.590+0.003+0.04)";
 
 
 			text = "Sell Structure";
 			action = "['onStructureSellPressed'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_WorkersMenu.sqf'";
+		};
+		class CTI_Menu_Control_SellCompleteBase : CTI_Menu_Control_Disband {
+			idc = 260005;
+			
+			y = "SafeZoneY+safezoneH*(0.590+0.003+0.083)";
+			 
+			text = "Remove Base";
+			action = "['onSellCompleteBase'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_WorkersMenu.sqf'";
 		};
 	};
 };

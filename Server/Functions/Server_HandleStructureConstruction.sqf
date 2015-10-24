@@ -114,17 +114,17 @@ if (_completion >= 100) then {
 	} forEach ((_side call CTI_CO_FNC_GetSideStructures) + (_logic getVariable "cti_structures_wip"));
 
 	//--- Check for empty areas now
-	/*_need_update = false;
+	_need_update = false;
 	{
 		_closest = [_x, _structures_positions] call CTI_CO_FNC_GetClosestEntity;
 		if (_closest distance _x > CTI_BASE_AREA_RANGE) then {_need_update = true; _areas set [_forEachIndex, "!nil!"]};
-	} forEach +_areas;*/
+	} forEach +_areas;
 
 	//--- Only update if we have to
-	//if (_need_update) then {
-	//	_areas = _areas - ["!nil!"];
-	//	_logic setVariable ["cti_structures_areas", _areas, true];
-	//};
+	if (_need_update) then {
+		_areas = _areas - ["!nil!"];
+		_logic setVariable ["cti_structures_areas", _areas, true];
+	};
 
 	//todo: add message bout structure expiration
 };

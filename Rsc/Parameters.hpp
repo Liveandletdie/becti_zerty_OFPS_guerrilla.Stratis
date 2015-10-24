@@ -41,6 +41,12 @@ class Params {
 		texts[] = {"2 KM","3 KM","4 KM","5 KM","6 KM","7 KM","8 KM","9 KM","10 KM","12 KM","15 KM","20 KM"};
 		default = 4000;
 	};
+	class CTI_MILITARY_INSTALLATION_PRICE {
+		title = "Base: Military Installation Price";
+		values[] = {10000,20000,30000};
+		texts[] = {"$10000","$20000","$30000"};
+		default = 10000;
+	};
 	class CTI_ECONOMY_INCOME_CYCLE {
 		title = "INCOME: Delay";
 		values[] = {15,30,45,60,90,120,160,190};

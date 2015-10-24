@@ -133,7 +133,14 @@ if (!(_in_area) && ! CTI_VAR_StructureCanceled && (_buildingID == CTI_Constructi
 	if (count (CTI_P_SideLogic getVariable "cti_structures_areas") < CTI_BASE_AREA_MAX) then {
 	
 		//--- We create a new area if we still have room for areas and of course, we allow the construction
-		CTI_P_SideLogic setVariable ["cti_structures_areas", (CTI_P_SideLogic getVariable "cti_structures_areas") + [[_pos select 0, _pos select 1]], true]; 
+		CTI_P_SideLogic setVariable ["cti_structure_building_canceled", 0];
+		if(((_var select 0) select 0) isEqualTo "MilitaryInstallation") then {
+			_in_area = true;
+			CTI_P_SideLogic setVariable ["cti_structures_areas", (CTI_P_SideLogic getVariable "cti_structures_areas") + [[_pos select 0, _pos select 1]], true];
+		} else {
+			CTI_VAR_StructureCanceled = true;
+			player groupChat format ["HQ: You Must Build Inside of an Established Military Installation."];
+		}; 
 	} else {
 		CTI_VAR_StructureCanceled = true;
 		player groupChat format ["HQ: The base area limit has been reached."];
@@ -142,10 +149,55 @@ if (!(_in_area) && ! CTI_VAR_StructureCanceled && (_buildingID == CTI_Constructi
 
 };
 
+//--- Check to see if building inside of "Established" military installation...
+if (_in_area && !CTI_VAR_StructureCanceled && (_buildingID == CTI_ConstructionCam_BuildingID)) then {
+	// if in range but construction is another military installation... 
+	if(!(((_var select 0) select 0) isEqualTo "MilitaryInstallation")) then {
+		_check_in_range = false;
+		{
+			if ((_x getVariable "cti_structure_type") == "MilitaryInstallation") then {
+				
+				// Retrieve 2d distance
+				// Let A = (Ax - Bx), B = (Ay - By)
+				// D^2 = A^2 + B^2
+				_aPos = getPos _x;
+				_bPos = _pos;
+				_abX = ((_aPos select 0) - (_bPos select 0));
+				_abY = ((_aPos select 1) - (_bPos select 1));
+				_d = sqrt ((_abX * _abX)+(_abY * _abY));
+				// Check distance for build
+				if (_d < CTI_BASE_AREA_RANGE) then {
+					_check_in_range = true;
+				};
+				//diag_log format ["OLD!!!_x: %1 _pos : %2", (getPos _x), _pos];
+				//diag_log format ["OLD!!!Distance: %1", (_x distance _pos)];
+				//diag_log format ["_x: %1 _pos : %2", _aPos, _bPos];
+				//diag_log format ["Distance: %1", _d];
+			};
+		} forEach ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures);
+		CTI_VAR_StructureCanceled = !_check_in_range;
+		if (!_check_in_range) then {
+			player groupChat format ["HQ: You Must Build Inside of an Established Military Installation."];
+		};
+	};
+};
+
+// end csm
+
 
 //--- If there's no problems then we place it.
 if (!CTI_VAR_StructureCanceled && (call CTI_CL_FNC_IsPlayerCommander) && (_buildingID == CTI_ConstructionCam_BuildingID)) then {
 	if ((call CTI_CL_FNC_GetPlayerFunds) >= (_var select 2)) then {
+	
+		
+			_tracking_point = [_pos select 0, _pos select 1];
+			_markerLocal = createMarkerLocal [Format ["cti_structure_%1", CTI_P_MarkerIterator], [_pos select 0, _pos select 1]];
+			CTI_P_MarkerIterator = CTI_P_MarkerIterator + 1;
+			_markerLocal setMarkerTypeLocal format["%1installation", CTI_P_MarkerPrefix];
+			_markerLocal setMarkerColorLocal "ColorBlack";
+			_markerLocal setMarkerSizeLocal [0.75, 0.75];
+			_markerLocal setMarkerTextLocal ((_var select 0) select 0);
+			// end csm
 	
 		// Place it
 		-(_var select 2) call CTI_CL_FNC_ChangePlayerFunds;
@@ -160,6 +212,7 @@ if (!CTI_VAR_StructureCanceled && (call CTI_CL_FNC_IsPlayerCommander) && (_build
 		_ruins_placed_building = _logic_placed_building getVariable "cti_structures_wip";
 		_keep_tracking = false;
 		if (!(isNil '_ruins_placed_building')) then {
+			// csm
 			
 			_keep_tracking = true;
 			while{ _keep_tracking } do {
@@ -173,9 +226,10 @@ if (!CTI_VAR_StructureCanceled && (call CTI_CL_FNC_IsPlayerCommander) && (_build
 				}forEach (_temp_ruins_placingBuilding);
 			};
 		};
+		deleteMarkerLocal _markerLocal;
+		// end csm
 	} else {
 		player groupChat format ["HQ: Insufficient Funds."];
 		
 	};
 };
-
