@@ -367,7 +367,7 @@ class Params {
 		title = "Zerty: TOWNS: Detection Range";
 		values[] = {300,500,800,1000,1200};
 		texts[] = {"300m","500m","800m","1000m","1200m"};
-		default = 300;
+		default = 500;
 	};
 	class CTI_TOWNS_RESISTANCE_GROUPS_RATIO {
 		title = "Zerty: TOWNS : Resistance difficulty";
@@ -467,7 +467,7 @@ class Params {
 		title = "Zerty: Strategic: Max active per side";
 		values[] = {1,2,3,4};
 		texts[] = {"1","2","3","4"};
-		default = 1;
+		default = 2;
 	};
 	class CTI_SM_TCAS {
 		title = "Zerty: Strategic: Town CAS if value above";
