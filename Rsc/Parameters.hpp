@@ -39,7 +39,7 @@ class Params {
 		title = "BASE: Startup Placement";
 		values[] = {2000,3000,4000,5000,6000,7000,8000,9000,10000,12000,15000,20000};
 		texts[] = {"2 KM","3 KM","4 KM","5 KM","6 KM","7 KM","8 KM","9 KM","10 KM","12 KM","15 KM","20 KM"};
-		default = 2000;
+		default = 4000;
 	};
 	class CTI_ECONOMY_INCOME_CYCLE {
 		title = "INCOME: Delay";
@@ -218,7 +218,7 @@ class Params {
 		title = "Zerty: AI: Skill (credit : Bl1p, fluit)";
 		values[] = {1,2,3,4,5};
 		texts[] = {"Retards","DumbFucks","NotSobad","Good","Very Good"};
-		default = 4;
+		default = 3;
 	};
 
 	class CTI_MAX_MISSION_TIME {
@@ -373,7 +373,7 @@ class Params {
 		title = "Zerty: TOWNS : Resistance difficulty";
 		values[] = {0,25,50,75,100};
 		texts[] = {"Null","Normal","Hard","Very hard","HELL"};
-		default = 50;
+		default = 75;
 	};
 	class CTI_TOWNS_RESISTANCE_INACTIVE_MAX {
 		title = "Zerty: TOWNS : Resistance despawn Timer";
@@ -467,7 +467,7 @@ class Params {
 		title = "Zerty: Strategic: Max active per side";
 		values[] = {1,2,3,4};
 		texts[] = {"1","2","3","4"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_SM_TCAS {
 		title = "Zerty: Strategic: Town CAS if value above";
