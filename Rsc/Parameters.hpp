@@ -371,9 +371,9 @@ class Params {
 	};
 	class CTI_TOWNS_RESISTANCE_DETECTION_RANGE {
 		title = "Zerty: TOWNS: Detection Range";
-		values[] = {300,500,800,1000,1200};
-		texts[] = {"300m","500m","800m","1000m","1200m"};
-		default = 500;
+		values[] = {300,400,500,800,1000,1200};
+		texts[] = {"300m","400m","500m","800m","1000m","1200m"};
+		default = 400;
 	};
 	class CTI_TOWNS_RESISTANCE_GROUPS_RATIO {
 		title = "Zerty: TOWNS : Resistance difficulty";

@@ -27,7 +27,9 @@
 	Common Function: CTI_CO_FNC_CreateUnit
 	Common Function: CTI_CO_FNC_CreateVehicle
 	Common Function: CTI_CO_FNC_GetEmptyPosition
+	Common Function: CTI_CO_FNC_GetEmptyPositionWater
 	Common Function: CTI_CO_FNC_GetRandomPosition
+	Common Function: CTI_CO_FNC_GetRandomPositionWater
 	Common Function: CTI_CO_FNC_GetSideID
 	Common Function: CTI_CO_FNC_GetSideUpgrades
 	Common Function: CTI_CO_FNC_ManVehicle
@@ -90,8 +92,11 @@ switch (true) do {
 	case (_value > 400 && _value <= 450) : {
 		_pool_units = [[["SOLDIER", 3], ["SOLDIER_GL", 1], ["SOLDIERS_AT_LIGHT", 2, 37], ["SOLDIERS_AT_MEDIUM", 1, 82], ["SOLDIERS_AT_HEAVY", 2, 75], ["SOLDIER_AA", 1], ["SOLDIER_MEDIC", 2], ["SOLDIERS_MG", 2], ["SOLDIERS_ENGINEER", 1, 75], ["SOLDIERS_SPECOPS", 1], ["SOLDIERS_SNIPERS", 1]], [["VEHICLES_LIGHT", 1, 30], ["VEHICLES_MEDIUM", 1, 42], ["VEHICLES_HEAVY", 1, 40], ["VEHICLES_AA_LIGHT", 1, 30]]];
 	};
-	case (_value > 450) : {
+	case (_value > 450 && _value <= 500) : {
 		_pool_units = [[["SOLDIER", 3], ["SOLDIER_GL", 1], ["SOLDIERS_AT_LIGHT", 2, 35], ["SOLDIERS_AT_MEDIUM", 1, 84], ["SOLDIERS_AT_HEAVY", 2, 75], ["SOLDIER_AA", 1], ["SOLDIER_MEDIC", 2], ["SOLDIERS_MG", 2], ["SOLDIERS_ENGINEER", 1, 75], ["SOLDIERS_SPECOPS", 1], ["SOLDIERS_SNIPERS", 1]], [["VEHICLES_LIGHT", 1, 27], ["VEHICLES_MEDIUM", 1, 45], ["VEHICLES_HEAVY", 1, 42], ["VEHICLES_AA_LIGHT", 1, 30]]];
+	};
+	case (_value > 500) : {
+		_pool_units = [[["NAVAL_INFANTRY", 6, 99], ["NAVAL_BOATS", 4, 65], ["NAVAL_ASSAULT_BOATS", 6, 65]]];
 	};
 };
 
@@ -228,11 +233,17 @@ _positions = [];
 {
 	//diag_log _x;
 
-	_position = [getPos _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE] call CTI_CO_FNC_GetRandomPosition;
-	_position = [_position, 50] call CTI_CO_FNC_GetEmptyPosition;
-	_road_pos=(_position nearRoads 100);
-	if (count _road_pos > 0) then {_position = _road_pos select floor random (count _road_pos);};
-	_positions pushBack _position;
+	if (_value > 500) then {
+		_position = [getPos _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE] call CTI_CO_FNC_GetRandomPositionWater;
+		_position = [_position, 50] call CTI_CO_FNC_GetEmptyPositionWater;
+		_positions pushBack _position;
+		} else {
+		_position = [getPos _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE] call CTI_CO_FNC_GetRandomPosition;
+		_position = [_position, 50] call CTI_CO_FNC_GetEmptyPosition;
+		_road_pos=(_position nearRoads 100);
+		if (count _road_pos > 0) then {_position = _road_pos select floor random (count _road_pos);};
+		_positions pushBack _position;
+	};
 
 	_group = createGroup _side;
 	_groups pushBack _group;

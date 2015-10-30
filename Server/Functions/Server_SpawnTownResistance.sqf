@@ -26,7 +26,9 @@
 	Common Function: CTI_CO_FNC_CreateUnit
 	Common Function: CTI_CO_FNC_CreateVehicle
 	Common Function: CTI_CO_FNC_GetEmptyPosition
+	Common Function: CTI_CO_FNC_GetEmptyPositionWater
 	Common Function: CTI_CO_FNC_GetRandomPosition
+	Common Function: CTI_CO_FNC_GetRandomPositionWater
 	Common Function: CTI_CO_FNC_ManVehicle
 	Server Function: CTI_SE_FNC_HandleEmptyVehicle
 
@@ -84,11 +86,11 @@ switch (true) do {
 	case (_value > 400 && _value <= 450) : {
 		_pool_units = [[["GUER_SOLDIER", 3], ["GUER_SOLDIER_GL", 1], ["GUER_SOLDIERS_AT_LIGHT", 2, 99], ["GUER_SOLDIERS_AT_MEDIUM", 1, 99], ["GUER_SOLDIERS_AT_HEAVY", 2, 99], ["GUER_SOLDIER_AA", 1, 55], ["GUER_SOLDIER_MEDIC", 2], ["GUER_SOLDIERS_MG", 2], ["GUER_SOLDIERS_ENGINEER", 1, 75], ["GUER_SOLDIERS_SPECOPS", 1], ["GUER_SOLDIERS_SNIPERS", 1]],[ ["GUER_VEHICLES_LIGHT", 1, 60], ["GUER_VEHICLES_MEDIUM", 1, 55], ["GUER_VEHICLES_AA_LIGHT", 1, 45]]];
 	};
-	case (_value > 450) : {
-		_pool_units = [
-		[["GUER_SOLDIER", 3], ["GUER_SOLDIER_GL", 1], ["GUER_SOLDIERS_AT_LIGHT", 2, 99], ["GUER_SOLDIERS_AT_MEDIUM", 1, 99], ["GUER_SOLDIERS_AT_HEAVY", 2, 99], ["GUER_SOLDIER_AA", 1, 60], ["GUER_SOLDIER_MEDIC", 2], ["GUER_SOLDIERS_MG", 2], ["GUER_SOLDIERS_ENGINEER", 1, 75], ["GUER_SOLDIERS_SPECOPS", 1], ["GUER_SOLDIERS_SNIPERS", 1]],
-		[["GUER_VEHICLES_LIGHT", 1, 40], ["GUER_VEHICLES_MEDIUM", 1, 65], ["GUER_VEHICLES_HEAVY", 1, 10], ["GUER_VEHICLES_AA_LIGHT", 1, 60]]
-		];
+	case (_value > 450 && _value <= 500) : {
+		_pool_units = [[["GUER_SOLDIER", 3], ["GUER_SOLDIER_GL", 1], ["GUER_SOLDIERS_AT_LIGHT", 2, 99], ["GUER_SOLDIERS_AT_MEDIUM", 1, 99], ["GUER_SOLDIERS_AT_HEAVY", 2, 99], ["GUER_SOLDIER_AA", 1, 60], ["GUER_SOLDIER_MEDIC", 2], ["GUER_SOLDIERS_MG", 2], ["GUER_SOLDIERS_ENGINEER", 1, 75], ["GUER_SOLDIERS_SPECOPS", 1], ["GUER_SOLDIERS_SNIPERS", 1]],[["GUER_VEHICLES_LIGHT", 1, 40], ["GUER_VEHICLES_MEDIUM", 1, 65], ["GUER_VEHICLES_HEAVY", 1, 10], ["GUER_VEHICLES_AA_LIGHT", 1, 60]]];
+	};
+	case (_value > 500) : {
+		_pool_units = [[["GUER_NAVAL_INFANTRY", 6, 99], ["GUER_NAVAL_BOATS", 4, 75], ["GUER_NAVAL_ASSAULT_BOATS", 8, 75]]];
 	};
 };
 
@@ -158,13 +160,19 @@ _groups = [];
 _positions = [];
 {
 	//diag_log _x;
-
-	_position = [getPos _town, 25, CTI_TOWNS_RESISTANCE_SPAWN_RANGE] call CTI_CO_FNC_GetRandomPosition;
-	_position = [_position, 50] call CTI_CO_FNC_GetEmptyPosition;
-	_road_pos=(_position nearRoads 100);
-	if (count _road_pos > 0) then {_position = _road_pos select floor random (count _road_pos);};
-	_positions pushBack _position;
-
+	
+	if (_value > 500) then {
+		_position = [getPos _town, 25, CTI_TOWNS_RESISTANCE_SPAWN_RANGE] call CTI_CO_FNC_GetRandomPositionWater;
+		_position = [_position, 50] call CTI_CO_FNC_GetEmptyPositionWater;
+		_positions pushBack _position;
+		} else {
+		_position = [getPos _town, 25, CTI_TOWNS_RESISTANCE_SPAWN_RANGE] call CTI_CO_FNC_GetRandomPosition;
+		_position = [_position, 50] call CTI_CO_FNC_GetEmptyPosition;
+		_road_pos=(_position nearRoads 100);
+		if (count _road_pos > 0) then {_position = _road_pos select floor random (count _road_pos);};
+		_positions pushBack _position;
+	};
+	
 	_group = createGroup resistance;
 	_groups pushBack _group;
 

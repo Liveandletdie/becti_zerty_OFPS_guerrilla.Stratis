@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "scriptedFSM.cfg, town_resistance.fsm">*/
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, town_resistance.fsm">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Start_FSM",0,250,-100.000000,-500.000000,0.000000,-450.000000,0.000000,"Start FSM"};
@@ -31,8 +31,8 @@ link12[] = {10,11};
 link13[] = {11,13};
 link14[] = {12,1};
 link15[] = {13,1};
-globals[] = {25.000000,1,0,0,0,640,480,1,172,6316128,1,-549.415588,390.034454,787.911072,-568.901123,610,881,1};
-window[] = {2,-1,-1,-1,-1,687,75,1111,75,3,628};
+globals[] = {25.000000,1,0,0,0,640,480,1,172,6316128,1,-549.415588,390.034454,787.911072,-568.901123,610,1430,1};
+window[] = {2,-1,-1,-32000,-32000,742,130,1166,130,3,628};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -71,7 +71,7 @@ class FSM
       name = "Units_near_Cente";
       init = /*%FSM<STATEINIT""">*/"_sideID = _town getVariable ""cti_town_sideID"";" \n
        "_side = (_sideID) Call CTI_CO_FNC_GetSideFromID;" \n
-       "//_objects = (_town nearEntities [""AllVehicles"", CTI_TOWNS_CAPTURE_RANGE]) unitsBelowHeight 30;" \n
+       "//_objects = (_town nearEntities [""AllVehicles"", CTI_TOWNS_CAPTURE_RANGE]) unitsBelowHeight 100;" \n
        "_PATROLS=(PATROL_logic getVariable [""patrols"",[]]);" \n
        "_groups=_PATROLS+ (_town getvariable [""CTI_TOWN_GROUPS"",[]])+ (CTI_EAST getVariable [""CTI_Teams"",[]])+(CTI_WEST getVariable [""CTI_Teams"",[]]);" \n
        "//{_groups set [count _groups,group _x];true} count ();" \n
@@ -81,7 +81,7 @@ class FSM
        "" \n
        "_objects=[];" \n
        "{if ((_x distance _town) <=  CTI_TOWNS_CAPTURE_RANGE) then {_objects set [count _objects,_x];};true} count _p_objects;" \n
-       "_objects=_objects unitsBelowHeight 30;" \n
+       "_objects=_objects unitsBelowHeight 100;" \n
        "" \n
        "" \n
        "_west = west countSide _objects;" \n
@@ -284,7 +284,7 @@ class FSM
   initState="Start_FSM";
   finalStates[] =
   {
-    "End_FSM"
+    "End_FSM",
   };
 };
 /*%FSM</COMPILE>*/

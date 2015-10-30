@@ -37,6 +37,12 @@ with missionNamespace do {
 	WEST_VEHICLE_ARMORED_LIGHT = [["B_G_Offroad_01_armed_F", 2], ["B_G_Offroad_01_armed_F", 2]];   
 	// WEST_VEHICLE_MECHANIZED = ["mechanized1","mechanized2"];
 	WEST_VEHICLE_MOTORIZED = [WEST_MOTORIZED_MG, WEST_MOTORIZED_GL, WEST_MOTORIZED_MG];
+	
+	//--- Naval
+	WEST_NAVAL_INFANTRY = ["B_diver_TL_F", "B_diver_F"];
+	WEST_NAVAL_BOATS = ["B_Boat_Transport_01_F"];
+	WEST_NAVAL_ASSAULT_BOATS = ["B_Boat_Armed_01_minigun_F"];
+	WEST_NAVAL_ARMORED = ["B_APC_Wheeled_01_cannon_F"];
 
 	//--- Vehicles - Mixed
 	WEST_VEHICLES_AA_LIGHT = WEST_VEHICLE_AA;

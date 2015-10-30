@@ -12,8 +12,7 @@ class Mission
 		"A3_Data_F_Curator_Virtual",
 		"a3_characters_f",
 		"A3_Modules_F",
-		"3DEN",
-		"A3_Structures_F_Mil_Helipads"
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
@@ -924,7 +923,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=31;
+		items=34;
 		class Item0
 		{
 			position[]={5022.2573,208.5887,5906.6309};
@@ -989,7 +988,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="Town5";
-			init="nullReturn = [this, ""Air Field"", resistance, 200] execVM ""Common\Init\Init_Location.sqf""";
+			init="nullReturn = [this, ""Air Field"", resistance, 200,""Town33""] execVM ""Common\Init\Init_Location.sqf""";
 		};
 		class Item6
 		{
@@ -1187,7 +1186,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="Town23";
-			init="nullReturn = [this, ""Kamino Range"", resistance, 300] execVM ""Common\Init\Init_Location.sqf""";
+			init="nullReturn = [this, ""Kamino Range"", resistance, 300,""Town31""] execVM ""Common\Init\Init_Location.sqf""";
 		};
 		class Item24
 		{
@@ -1209,7 +1208,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="Town25";
-			init="nullReturn = [this, ""Tsoukalia"", resistance, 200] execVM ""Common\Init\Init_Location.sqf""";
+			init="nullReturn = [this, ""Tsoukalia"", resistance, 200,""Town31""] execVM ""Common\Init\Init_Location.sqf""";
 		};
 		class Item26
 		{
@@ -1265,6 +1264,39 @@ class Mission
 			skill=0.60000002;
 			text="Town30";
 			init="nullReturn = [this, ""Storage Dump"", resistance, 175,""Town10""] execVM ""Common\Init\Init_Location.sqf""";
+		};
+		class Item31
+		{
+			position[]={6233.6768,-0.49042404,2371.0293};
+			id=91;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			leader=1;
+			skill=0.60000002;
+			text="Town31";
+			init="nullReturn = [this, ""Sub Pen"", resistance, 550,""Town15""] execVM ""Common\Init\Init_Location.sqf""; this setPos [getPos this select 0, getPos this select 1,-.5];";
+		};
+		class Item32
+		{
+			position[]={2058.2329,-0.12589478,7205.2051};
+			id=92;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			leader=1;
+			skill=0.60000002;
+			text="Town32";
+			init="nullReturn = [this, ""Com Platform"", resistance, 550,""Town3""] execVM ""Common\Init\Init_Location.sqf""; this setPos [getPos this select 0, getPos this select 1,+4.1];";
+		};
+		class Item33
+		{
+			position[]={465.21213,0.17144716,3098.0908};
+			id=93;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			leader=1;
+			skill=0.60000002;
+			text="Town33";
+			init="nullReturn = [this, ""Fuel Depot"", resistance, 550,""Town7""] execVM ""Common\Init\Init_Location.sqf""; this setPos [getPos this select 0, getPos this select 1,+4.6];";
 		};
 	};
 	class Markers

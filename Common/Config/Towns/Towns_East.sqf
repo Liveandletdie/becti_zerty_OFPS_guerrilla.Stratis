@@ -37,6 +37,12 @@ with missionNamespace do {
 	EAST_VEHICLE_ARMORED_LIGHT = [["O_G_Offroad_01_armed_F", 2]];
 	// EAST_VEHICLE_MECHANIZED = ["mechanized1","mechanized2"];
 	EAST_VEHICLE_MOTORIZED = [EAST_MOTORIZED_MG, EAST_MOTORIZED_GL, EAST_MOTORIZED_MG];
+	
+	//--- Naval
+	EAST_NAVAL_INFANTRY = ["O_diver_TL_F", "O_diver_F"];
+	EAST_NAVAL_BOATS = ["O_Boat_Armed_01_hmg_F"];
+	EAST_NAVAL_ASSAULT_BOATS = ["O_Boat_Transport_01_F"];
+	EAST_NAVAL_ARMORED = ["O_APC_Wheeled_02_rcws_F"];
 
 	//--- Vehicles - Mixed
 	EAST_VEHICLES_AA_LIGHT = EAST_VEHICLE_AA;

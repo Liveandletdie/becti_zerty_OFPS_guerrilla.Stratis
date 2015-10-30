@@ -334,27 +334,27 @@ CTI_TOWNS_PATROL_HOPS = 1; //--- Towns patrol hops (non-waypoint)
 CTI_TOWNS_PATROL_RANGE = 200; //--- Patrol range in a town
 
 //--- Towns: Occupation
-CTI_TOWNS_OCCUPATION_SPAWN_RANGE = 200; //--- Determine how far the units may spawn from the town center
+CTI_TOWNS_OCCUPATION_SPAWN_RANGE = 150; //--- Determine how far the units may spawn from the town center
 CTI_TOWNS_OCCUPATION_GROUPS_RATIO = 25; //--- Determine how many groups may spawn (scales with town value)
-CTI_TOWNS_OCCUPATION_DETECTION_RANGE = 300; //--- Determine how far a threat may be detected from the town center
-CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 30; //--- Determine how high a threat is considered aerial
+CTI_TOWNS_OCCUPATION_DETECTION_RANGE = 400; //--- Determine how far a threat may be detected from the town center
+CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 100; //--- Determine how high a threat is considered aerial
 CTI_TOWNS_OCCUPATION_INACTIVE_MAX = 1800; //--- Determine how long a town may remain active when triggered
 CTI_TOWNS_OCCUPATION_MIN_ACTIVE = 3; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
 //--- Towns: Resistance
-CTI_TOWNS_RESISTANCE_SPAWN_RANGE = 200; //--- Determine how far the units may spawn from the town center
-//CTI_TOWNS_RESISTANCE_GROUPS_RATIO = 0.025; //--- Determine how many groups may spawn (scales with town value)
-//CTI_TOWNS_RESISTANCE_DETECTION_RANGE = 750; //--- Determine how far a threat may be detected from the town center
-CTI_TOWNS_RESISTANCE_DETECTION_RANGE_AIR = 30; //--- Determine how high a threat is considered aerial
+CTI_TOWNS_RESISTANCE_SPAWN_RANGE = 150; //--- Determine how far the units may spawn from the town center
+CTI_TOWNS_RESISTANCE_GROUPS_RATIO = 0.025; //--- Determine how many groups may spawn (scales with town value)
+CTI_TOWNS_RESISTANCE_DETECTION_RANGE = 400; //--- Determine how far a threat may be detected from the town center
+CTI_TOWNS_RESISTANCE_DETECTION_RANGE_AIR = 100; //--- Determine how high a threat is considered aerial
 //CTI_TOWNS_RESISTANCE_INACTIVE_MAX = 300; //--- Determine how long a town may remain active when triggered
 CTI_TOWNS_RESISTANCE_MIN_ACTIVE = 3; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
 //--- Towns: Parameters
 with missionNamespace do {
 	if (isNil 'CTI_TOWNS_OCCUPATION') then {CTI_TOWNS_OCCUPATION = 1}; //--- Determine whether occupation is enabled or not
-	if (isNil 'CTI_TOWNS_RESISTANCE_DETECTION_RANGE') then {CTI_TOWNS_RESISTANCE_DETECTION_RANGE = 800};//Done
+	if (isNil 'CTI_TOWNS_RESISTANCE_DETECTION_RANGE') then {CTI_TOWNS_RESISTANCE_DETECTION_RANGE = 500};//Done
 	if (isNil 'CTI_TOWNS_RESISTANCE_GROUPS_RATIO') then {CTI_TOWNS_RESISTANCE_GROUPS_RATIO = 50};//Done
-	if (isNil 'CTI_TOWNS_RESISTANCE_INACTIVE_MAX') then {CTI_TOWNS_RESISTANCE_INACTIVE_MAX = 30};//Done
+	if (isNil 'CTI_TOWNS_RESISTANCE_INACTIVE_MAX') then {CTI_TOWNS_RESISTANCE_INACTIVE_MAX = 300};//Done
 	if (isNil 'CTI_TOWNS_INCOME_RATIO') then {CTI_TOWNS_INCOME_RATIO = 2};
 	if (isNil 'CTI_TOWNS_CAPURE_RATIO') then {CTI_TOWNS_CAPURE_RATIO = 5};
 };
@@ -647,7 +647,7 @@ with missionNamespace do {
 	if (isNil "CTI_SM_REPAIR") then {CTI_SM_REPAIR=1};
 	if (isNil "CTI_SM_MORTARS") then {CTI_SM_MORTARS=0};
 	if (isNil "CTI_SM_STRATEGIC") then {CTI_SM_STRATEGIC=1};
-	if (isNil "CTI_SM_STRATEGIC_NB") then {CTI_SM_STRATEGIC_NB=3};
+	if (isNil "CTI_SM_STRATEGIC_NB") then {CTI_SM_STRATEGIC_NB=2};
 	if (isNil "CTI_SM_HALO") then {CTI_SM_HALO=1};
 	if (isNil "CTI_SM_RADAR") then {CTI_SM_RADAR=1};
 	if (isnil "CTI_SM_FAR") then {CTI_SM_FAR = 1};
