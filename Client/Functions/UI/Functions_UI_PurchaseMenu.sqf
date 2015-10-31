@@ -43,10 +43,10 @@ CTI_UI_Purchase_GetFirstAvailableFactories = {
 			case CTI_BARRACKS: {CTI_FACTORY_BARRACKS};
 			case CTI_LIGHT: {CTI_FACTORY_LIGHT};
 			case CTI_HEAVY: {CTI_FACTORY_HEAVY};
+			case CTI_NAVAL: {CTI_FACTORY_NAVAL};
 			case CTI_AIR: {CTI_FACTORY_AIR};
 			case CTI_REPAIR: {CTI_FACTORY_REPAIR};
 			case CTI_AMMO: {CTI_FACTORY_AMMO};
-			case CTI_NAVAL: {CTI_FACTORY_NAVAL};
 			case CTI_FTOWN: {CTI_FACTORY_TOWN};
 			default {-1};
 		};
@@ -65,6 +65,7 @@ CTI_UI_Purchase_FillUnitsList = {
 		case CTI_BARRACKS: {CTI_UPGRADE_BARRACKS};
 		case CTI_LIGHT: {CTI_UPGRADE_LIGHT};
 		case CTI_HEAVY: {CTI_UPGRADE_HEAVY};
+		case CTI_NAVAL: {CTI_UPGRADE_NAVAL};
 		case CTI_AIR: {CTI_UPGRADE_AIR};
 		default {-1};
 	};

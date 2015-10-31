@@ -32,6 +32,13 @@ _lev=_lev+	[3];
 _lin=_lin+	[[[CTI_UPGRADE_LIGHT,1],[],[]]];
 _t=_t+			[[50*CTI_UPGRADE_RATIO,100*CTI_UPGRADE_RATIO,150*CTI_UPGRADE_RATIO]];
 
+_l=_l+				[["Factory: Naval", "Unlock Better Naval Units"]];
+_a=_a	+			[true];
+_c=_c +				[[10000]];
+_lev=_lev+			[1];
+_lin=_lin+	[[[CTI_UPGRADE_LIGHT,1],[],[]]];
+_t=_t+			[[20*CTI_UPGRADE_RATIO]];
+
 _l=_l+			[["Factory: Aircraft Factory", "Unlock better aircraft units"]];
 _a=_a	+			[true];
 _c=_c +			[[20000,25000,30000]];
@@ -160,6 +167,7 @@ _c=_c +				[[5000,10000,20000,30000,40000]];
 _lev=_lev+			[5];
 _lin=_lin+			[[[],[]]];
 _t=_t+				[[10*CTI_UPGRADE_RATIO,20*CTI_UPGRADE_RATIO,40*CTI_UPGRADE_RATIO,80*CTI_UPGRADE_RATIO,160*CTI_UPGRADE_RATIO]];
+
 /*
 _l=_l+			[["Network: Reconfiguration cycle", "Lower Mesh Network reconfiguration cycle time (600s - 60s*lvl)"]];
 _a=_a	+			[false];

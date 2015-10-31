@@ -10,7 +10,8 @@ missionNamespace setVariable [format["CTI_%1_Base_Template", _side], [
 	[CTI_HEAVY, 0, [-30,-40]],
 	[CTI_AIR, 180, [-60,37]],
 	[CTI_REPAIR, 180, [60,37]],
-	[CTI_AMMO, 180, [80,37]]
+	[CTI_AMMO, 180, [80,37]],
+	[CTI_NAVAL, 180, [80,37]]
 ]];
 
 //--- Commander course of action ["Action", Parameter(s), Condition]
@@ -19,9 +20,11 @@ missionNamespace setVariable [format["CTI_%1_Commander_Path", _side], [
 	["build-structures", CTI_BARRACKS, {true}],
 	["build-structures", CTI_LIGHT, {true}],
 	["build-structures", CTI_CONTROLCENTER, {true}],
+	["build-structures", CTI_NAVAL, {true}],
 	["upgrade", [CTI_UPGRADE_BARRACKS, 1], {true}],
 	["upgrade", [CTI_UPGRADE_GEAR, 1], {true}],
 	["upgrade", [CTI_UPGRADE_LIGHT, 1], {true}],
+	["upgrade", [CTI_UPGRADE_NAVAL, 1], {true}],
 	["upgrade", [CTI_UPGRADE_TOWNS, 1], {true}],
 	["upgrade", [CTI_UPGRADE_GEAR, 2], {true}],
 	["upgrade", [CTI_UPGRADE_LIGHT, 2], {true}],
