@@ -537,6 +537,12 @@ class Params {
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
+	class CTI_SM_AIRSTRIKE {
+		title = "Airstrikes: Enabled";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};	
 	class CTI_SM_RADAR {
 		title = "Zerty: Air Radar: Enabled";
 		values[] = {0,1};

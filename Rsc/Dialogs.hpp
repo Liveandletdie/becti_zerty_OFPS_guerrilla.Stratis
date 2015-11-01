@@ -290,6 +290,13 @@ class CTI_RscInteraction {
 			action = "['OnDisDef'] call compile preprocessFileLineNumbers 'Addons\Strat_mode\Tablet\Events_UI_Interact.sqf'";
 			toolTip="Dismount Defense";
 		};
+		class CTI_Icon_Strike : CTI_Icon_Tablet {
+			idc = 511036;
+			x = "SafeZoneX + SafeZoneW*0.55";
+			text = "Rsc\Pictures\icon_bomb.paa";
+			action = "['OnStrike'] call compile preprocessFileLineNumbers 'Addons\Strat_mode\Tablet\Events_UI_Interact.sqf'";
+			toolTip="Call In Airstrike";
+		};
 	};
 };
 

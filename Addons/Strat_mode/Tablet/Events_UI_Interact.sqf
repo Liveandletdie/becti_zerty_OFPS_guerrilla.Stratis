@@ -444,7 +444,23 @@ switch (_action) do {
 			    		((uiNamespace getVariable "cti_dialog_ui_interractions") displayCtrl (511000+_i)) ctrlSetPosition [_base_x+(_offset*_base_w),_base_y+5,_base_w,_base_h];
 			    	};
 			    };
+				case 36: { // CTI_Icon_Strike
+					if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader group player) == player && [CTI_P_SideJoined, CTI_UPGRADE_AIRSTRIKE, 1] call CTI_CO_FNC_HasUpgrade && ( (missionNamespace getVariable 'CTI_SM_AIRSTRIKE')==1)) then {
 
+						if (time - CTI_AIRSTRIKE_LASTTIME >= CTI_AIRSTRIKE_COOLDOWN) then {
+							((uiNamespace getVariable "cti_dialog_ui_interractions") displayCtrl (511000+_i)) ctrlSetTextColor [1,1,0,1];
+							((uiNamespace getVariable "cti_dialog_ui_interractions") displayCtrl (511000+_i)) ctrlSetTooltip "Call In Airstrike - $10k";
+						}else{
+							((uiNamespace getVariable "cti_dialog_ui_interractions") displayCtrl (511000+_i)) ctrlSetTextColor [1,1,0,0.3];
+							((uiNamespace getVariable "cti_dialog_ui_interractions") displayCtrl (511000+_i)) ctrlSetTooltip format ["Airstrike Cooldown (20 min.)"];
+						};
+						((uiNamespace getVariable "cti_dialog_ui_interractions") displayCtrl (511000+_i)) ctrlSetPosition [_base_x+(_offset*_base_w),_base_y+_h_offset*_base_h,_base_w,_base_h];
+						_offset=_offset+1;
+
+					} else {
+
+					};
+			    };
 			};
 		};
 		//if (_offset == 0) exitwith {false};
@@ -652,6 +668,11 @@ switch (_action) do {
 			0.5 fadeSound 0.25;
 		};
 		['onLoad'] call compile preprocessFileLineNumbers 'Addons\Strat_mode\Tablet\Events_UI_Interact.sqf';
+	};
+	case "OnStrike": {
+		if !((CTI_P_SideLogic getVariable "cti_commander") == group player&& (leader group player) == player && [CTI_P_SideJoined, CTI_UPGRADE_AIRSTRIKE, 1] call CTI_CO_FNC_HasUpgrade && ( (missionNamespace getVariable 'CTI_SM_AIRSTRIKE')==1) && (time - CTI_AIRSTRIKE_LASTTIME >= CTI_AIRSTRIKE_COOLDOWN)) exitwith {false};
+		closedialog 0;
+		0 execvm "Addons\Airstrike\airstrike.sqf"
 	};
 	case "OnGroup": {
 		closedialog 0;

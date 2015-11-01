@@ -161,7 +161,6 @@ switch (_action) do {
 				};
 			} forEach (_total_structures);
 		};
-
 		
 		//// PSEUDOCODE
 		//// Get player side

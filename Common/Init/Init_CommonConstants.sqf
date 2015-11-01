@@ -239,6 +239,7 @@ CTI_UPGRADE_EXPI = 			18;
 CTI_UPGRADE_TRT = 			19;
 CTI_UPGRADE_TRA = 			20;
 CTI_UPGRADE_REST = 			21;
+CTI_UPGRADE_AIRSTRIKE =     22;
 //-----------------------------------------------------------------------------------------------------------------------//
 
 
@@ -573,7 +574,8 @@ CTI_HALO_ALTITUDE = 2000;
 CTI_HALO_RATIO = 2;
 CTI_UPGRADE_RATIO=if !(MADE_FOR_STRATIS) then {7} else {2};
 
-
+CTI_AIRSTRIKE_COOLDOWN = 20*60;
+CTI_AIRSTRIKE_LASTTIME=-CTI_AIRSTRIKE_COOLDOWN;
 
 CTI_VOTE_RATIO=0.51;
 
@@ -650,6 +652,7 @@ with missionNamespace do {
 	if (isNil "CTI_SM_STRATEGIC") then {CTI_SM_STRATEGIC=1};
 	if (isNil "CTI_SM_STRATEGIC_NB") then {CTI_SM_STRATEGIC_NB=2};
 	if (isNil "CTI_SM_HALO") then {CTI_SM_HALO=1};
+	if (isNil "CTI_SM_AIRSTRIKE") then {CTI_SM_AIRSTRIKE=1};
 	if (isNil "CTI_SM_RADAR") then {CTI_SM_RADAR=1};
 	if (isnil "CTI_SM_FAR") then {CTI_SM_FAR = 1};
 	if (isnil "CTI_SM_NONV") then {CTI_SM_NONV = 1};

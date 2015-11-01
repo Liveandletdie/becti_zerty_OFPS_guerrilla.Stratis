@@ -1561,6 +1561,38 @@ class Mission
 			angle=98.185226;
 		};
 	};
+	class Sensors
+	{
+		items=2;
+		class Item0
+		{
+			position[]={4064.6943,85.534309,6738.8765};
+			a=1000;
+			b=1000;
+			activationBy="ALPHA";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="nul = [] execVM ""Addons\Airstrike\airstrike.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={2689.9998,137.08653,1634.9565};
+			a=1000;
+			b=1000;
+			activationBy="BRAVO";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="nul = [] execVM ""Addons\Airstrike\airstrike.sqf"";";
+			class Effects
+			{
+			};
+		};
+	};
 };
 class Intro
 {
