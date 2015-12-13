@@ -11,8 +11,8 @@ class Mission
 		"A3_Modules_F_Curator_Curator",
 		"A3_Data_F_Curator_Virtual",
 		"a3_characters_f",
-		"A3_Modules_F",
-		"3DEN"
+		"A3_Modules_F"
+		//"3DEN"
 	};
 	addOnsAuto[]=
 	{
@@ -20,7 +20,7 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"a3_characters_f",
 		"A3_Characters_F_BLUFOR",
-		"3DEN",
+		//"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Structures_F_Mil_Flags",
 		"a3_map_stratis"
@@ -28,7 +28,7 @@ class Mission
 	randomSeed=7374927;
 	class Intel
 	{
-		briefingName="BECTI-Zerty-OFPS_G";
+		briefingName="BECTI - Zerty - OFPS_G";
 		overviewText="By Benny - Adapted from OFP era MFCTI (Mike Melvin)";
 		resistanceWest=0;
 		timeOfChanges=24720;
