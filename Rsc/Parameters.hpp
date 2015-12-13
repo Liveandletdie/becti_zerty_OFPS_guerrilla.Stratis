@@ -147,13 +147,13 @@ class Params {
 		title = "UNITS: Fatigue";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_FATIGUE_RATIO {
 		title = "UNITS: Fatigue reduction ratio for players";
 		values[] = {0,20,40,60,80,100};
 		texts[] = {"Full Fatigue","20%","40%","60%","80%","No Fatigue"};
-		default = 80;
+		default = 100;
 	};
 	class CTI_VEHICLES_EMPTY_TIMEOUT {
 		title = "UNITS: Vehicles Reycling Delay";
