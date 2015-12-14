@@ -5,7 +5,7 @@
 _funds = [group player, CTI_P_SideJoined] call CTI_CO_FNC_GetFunds;
 if (_funds < 10000) exitWith {hintsilent "Not enough funds"; sleep 1 ; hintsilent ""};
 
-
+if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader group player) == player && [CTI_P_SideJoined, CTI_UPGRADE_AIRSTRIKE, 1] call CTI_CO_FNC_HasUpgrade && ( (missionNamespace getVariable 'CTI_SM_AIRSTRIKE')==1)) then {
 BARBO_control = false;
 
 openMap true;
@@ -85,3 +85,5 @@ player sideChat "Bomb run finished";
 
 deleteMarker "BRStart";
 deleteMarker "BREnd";
+
+};
