@@ -652,7 +652,7 @@ with missionNamespace do {
 	if (isNil "CTI_SM_STRATEGIC") then {CTI_SM_STRATEGIC=1};
 	if (isNil "CTI_SM_STRATEGIC_NB") then {CTI_SM_STRATEGIC_NB=2};
 	if (isNil "CTI_SM_HALO") then {CTI_SM_HALO=1};
-	if (isNil "CTI_SM_AIRSTRIKE") then {CTI_SM_AIRSTRIKE=1};
+	if (isNil "CTI_SM_AIRSTRIKE") then {CTI_SM_AIRSTRIKE=0};
 	if (isNil "CTI_SM_RADAR") then {CTI_SM_RADAR=1};
 	if (isnil "CTI_SM_FAR") then {CTI_SM_FAR = 1};
 	if (isnil "CTI_SM_NONV") then {CTI_SM_NONV = 1};
