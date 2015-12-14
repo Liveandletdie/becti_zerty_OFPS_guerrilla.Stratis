@@ -21,7 +21,7 @@ private ["_pos","_offset","_marker"];
 
 
  //ss83 Server Rules, comments, etc added here
-_pos=[0,35000,0];
+_pos=[0,10000,0];
 _offset=500;
 _marker = createMarkerLocal ["cti_help_00", _pos];
 _marker setMarkerTypeLocal "mil_objective";
@@ -96,7 +96,7 @@ _marker setMarkerTextLocal  format ["No towns are available when have %1 towns a
 _pos=[(_pos select 0),(_pos select 1)-_offset,0];
 
 
-_pos=[14000,14000,0];    //SS83 Added this to get people to zoom out and read the map
+_pos=[10000,10000,0];    //SS83 Added this to get people to zoom out and read the map
 _offset=250;
 
 _marker = createMarkerLocal ["cti_help_h1", _pos];
@@ -212,7 +212,7 @@ _pos=[(_pos select 0),(_pos select 1)-_offset,(_pos select 2)-_offset/3];
 
 
 //SS83 Added below to put up server/TS information
-_pos=[31500,30000,0];
+_pos=[11500,10000,0];
 _offset=500;
 
 _marker = createMarkerLocal ["cti_serverinfo_1", _pos];
