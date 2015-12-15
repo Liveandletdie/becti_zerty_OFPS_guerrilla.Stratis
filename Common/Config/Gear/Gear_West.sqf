@@ -722,7 +722,7 @@ _p = _p		+ [100];
 _i = _i		+ ["U_B_Wetsuit"];
 _u = _u		+ [2];
 _p = _p		+ [450];
-/*
+
 _i = _i		+ ["U_B_survival_uniform"];
 _u = _u		+ [1];
 _p = _p		+ [150];
@@ -757,7 +757,7 @@ _p = _p		+ [150];
 
 _i = _i		+ ["U_BG_Guerilla3_2"];
 _u = _u		+ [1];
-_p = _p		+ [150]; */
+_p = _p		+ [150]; 
 
 //--- Vests
 _i = _i		+ ["V_Rangemaster_belt"];
