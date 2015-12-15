@@ -165,6 +165,7 @@ _u = _u		+ ['O_G_Offroad_01_F'];
 _u = _u		+ ['O_G_Offroad_01_armed_F'];
 _u = _u		+ ['C_Van_01_transport_F'];
 _u = _u		+ ['C_Kart_01_Red_F'];
-
+_u = _u		+ ['C_Hatchback_01_sport_F'];
+_u = _u		+ ['C_Hatchback_01_F'];
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_FTOWN], _u];
