@@ -160,7 +160,8 @@ _u = _u + [3];
 _f = _f + [CTI_FACTORY_LIGHT];
 _s = _s + [""];
 
-/*_c = _c + ['O_MRAP_02_hmg_F'];
+/*
+_c = _c + ['O_MRAP_02_hmg_F'];
 _p = _p + [''];
 _n = _n + [''];
 _o = _o + [800];

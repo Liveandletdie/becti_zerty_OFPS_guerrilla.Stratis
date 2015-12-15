@@ -1,7 +1,7 @@
 _side = _this;
 
 missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_Truck_01_mover_F"];
-missionNamespace setVariable [format["CTI_%1_Factories", _side], ["Barracks","Light","Heavy","Air","Ammo","Repair"]];
+missionNamespace setVariable [format["CTI_%1_Factories", _side], ["Barracks","Light","Heavy","Air","Ammo","Repair","Naval"]];
 
 missionNamespace setVariable [format["CTI_%1_Base_Template", _side], [
 	[CTI_BARRACKS, 180, [-23,33]],

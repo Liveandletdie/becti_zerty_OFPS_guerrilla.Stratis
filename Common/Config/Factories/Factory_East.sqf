@@ -79,7 +79,8 @@ _u = _u		+ ['O_UGV_01_F'];
 _u = _u		+ ['O_UGV_01_rcws_F'];
 _u = _u		+ ['O_Truck_03_medical_F'];
 _u = _u		+ ['Land_Pod_Heli_Transport_04_medevac_F'];
-/*_u = _u		+ ['I_MRAP_03_F'];
+/*
+_u = _u		+ ['I_MRAP_03_F'];
 _u = _u		+ ['I_MRAP_03_hmg_F'];
 _u = _u		+ ['I_MRAP_03_gmg_F']; 
 */
@@ -89,9 +90,9 @@ _u 			= ["O_APC_Tracked_02_cannon_F"];
 _u = _u		+ ['O_APC_Wheeled_02_rcws_F'];
 _u = _u		+ ["O_MBT_02_cannon_F"];
 _u = _u		+ ["O_APC_Tracked_02_AA_F"];
-if !(MADE_FOR_STRATIS) then
-{_u = _u		+ ["O_MBT_02_arty_F"];  
- _u = _u		+ ["B_MBT_01_mlrs_F"];  
+if !(MADE_FOR_STRATIS) then {
+_u = _u		+ ["O_MBT_02_arty_F"];  
+_u = _u		+ ["B_MBT_01_mlrs_F"];  
 };
 /*
 _u = _u		+ ['I_APC_Wheeled_03_cannon_F'];
@@ -119,7 +120,6 @@ _u = _u		+ ["O_Heli_Transport_04_repair_F"];
 /*
 _u = _u		+ ['I_Heli_light_03_F'];
 _u = _u		+ ['I_Plane_Fighter_03_CAS_F'];
-
 _u = _u		+ ['I_Plane_Fighter_03_AA_F'];
 */
 
