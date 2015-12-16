@@ -12,6 +12,9 @@ class Mission
 		"A3_Data_F_Curator_Virtual",
 		"a3_characters_f",
 		"A3_Modules_F"
+		"A3_Soft_F_Kart_Kart_01",
+		"A3_Soft_F_Car",
+		"A3_Soft_F_Truck"
 		//"3DEN"
 	};
 	addOnsAuto[]=
