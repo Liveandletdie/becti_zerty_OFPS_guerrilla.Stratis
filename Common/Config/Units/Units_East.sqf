@@ -495,7 +495,7 @@ _u = _u + [1];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + ["service-medic"];
 
-/*
+
 _c = _c + ['O_Heli_Light_02_F'];
 _p = _p + [''];
 _n = _n + [''];
@@ -504,7 +504,7 @@ _t = _t + [40];
 _u = _u + [2];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + [""];
-
+/*
 _c = _c + ['O_Heli_Attack_02_F'];
 _p = _p + [''];
 _n = _n + [''];

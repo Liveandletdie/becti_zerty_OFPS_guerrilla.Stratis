@@ -117,19 +117,19 @@ class Params {
 		title = "UNITS: Aircraft FFAR";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 0;
 	};
 	class CTI_VEHICLES_AIR_AA {
 		title = "UNITS: Aircraft AA Missiles";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 0;
 	};
 	class CTI_VEHICLES_AIR_AT {
 		title = "UNITS: Aircraft AT Missiles";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 0;
 	};
 	class CTI_VEHICLES_AIR_CM {
 		title = "UNITS: Aircraft Countermeasures";
