@@ -486,14 +486,14 @@ _s = _s + [""];
 _c = _c + ['I_Heli_Transport_02_F']; 
 _p = _p + [''];
 _n = _n + [(format ["Mohawk Airlift"])];
-_o = _o + [12000];
+_o = _o + [10000];
 _t = _t + [40];
 _u = _u + [2];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + [""];
 
 
-_c = _c + ['B_Heli_Transport_03_F']; 
+_c = _c + ['B_Heli_Transport_03_black_F']; 
 _p = _p + [''];
 _n = _n + [(format ["HURON Heavy Airlift (DLC ONLY)"])];
 _o = _o + [10000];
