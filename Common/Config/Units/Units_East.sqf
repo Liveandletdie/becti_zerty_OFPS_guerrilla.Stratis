@@ -160,6 +160,42 @@ _u = _u + [3];
 _f = _f + [CTI_FACTORY_LIGHT];
 _s = _s + [""];
 
+_c = _c + ['C_Van_01_transport_F'];
+_p = _p + [''];
+_n = _n + [''];
+_o = _o + [500];
+_t = _t + [15];
+_u = _u + [0];
+_f = _f + [CTI_FACTORY_LIGHT];
+_s = _s + [""];
+
+_c = _c + ['C_Kart_01_Red_F'];
+_p = _p + [''];
+_n = _n + [''];
+_o = _o + [250];
+_t = _t + [5];
+_u = _u + [0];
+_f = _f + [CTI_FACTORY_LIGHT];
+_s = _s + [""];
+
+_c = _c + ['C_Hatchback_01_sport_F'];
+_p = _p + [''];
+_n = _n + [''];
+_o = _o + [700];
+_t = _t + [15];
+_u = _u + [1];
+_f = _f + [CTI_FACTORY_LIGHT];
+_s = _s + [""];
+
+_c = _c + ['C_Hatchback_01_F'];
+_p = _p + [''];
+_n = _n + [''];
+_o = _o + [600];
+_t = _t + [15];
+_u = _u + [0];
+_f = _f + [CTI_FACTORY_LIGHT];
+_s = _s + [""];
+
 /*
 _c = _c + ['O_MRAP_02_hmg_F'];
 _p = _p + [''];
