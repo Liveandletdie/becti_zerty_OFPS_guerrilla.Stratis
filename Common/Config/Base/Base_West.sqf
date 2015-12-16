@@ -303,13 +303,62 @@ _prices = _prices 			+ [50];
 _placements = _placements 	+ [[0, 15]];
 _categories = _categories 	+ ["Fortification"];
 
-
-
 _headers = _headers 		+ ["Flag"];
 _classes = _classes 		+ ["Flag_NATO_F"];
 _prices = _prices 			+ [50];
 _placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Flag"];
+
+
+_headers = _headers 		+ ["Campfire"];
+_classes = _classes 		+ ["FirePlace_burning_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ ["Camp Chair"];
+_classes = _classes 		+ ["Land_CampingChair_V1_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ ["Camp Table"];
+_classes = _classes 		+ ["Land_CampingTable_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ ["Latrine"];
+_classes = _classes 		+ ["Land_ToiletBox_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ ["Tent"];
+_classes = _classes 		+ ["Land_TentDome_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ ["ISO Wall"];
+_classes = _classes 		+ ["Land_Cargo20_blue_F"];
+_prices = _prices 			+ [100];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+
+_headers = _headers 		+ ["Double Portable Light"];
+_classes = _classes 		+ ["Land_PortableLight_double_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ ["Portable Generator"];
+_classes = _classes 		+ ["Land_Portable_generator_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
 
 _headers = _headers 		+ [["Long Sandbag", [["DMG_Reduce", 2]]]];
 _classes = _classes 		+ ["Land_BagFence_Long_F"];
