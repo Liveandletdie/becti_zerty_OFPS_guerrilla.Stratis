@@ -14,7 +14,8 @@ class Mission
 		"A3_Modules_F",
 		"A3_Soft_F_Kart_Kart_01",
 		"A3_Soft_F_Car",
-		"A3_Soft_F_Truck"
+		"A3_Soft_F_Truck",
+		"A3_Characters_F_Civil",
 		//"3DEN"
 	};
 	addOnsAuto[]=
@@ -26,6 +27,7 @@ class Mission
 		"A3_Soft_F_Kart_Kart_01",
 		"A3_Soft_F_Car",
 		"A3_Soft_F_Truck",
+		"A3_Characters_F_Civil",
 		//"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Structures_F_Mil_Flags",
