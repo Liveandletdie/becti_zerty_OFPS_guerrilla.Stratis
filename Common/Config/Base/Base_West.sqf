@@ -198,6 +198,24 @@ _prices = _prices 			+ [20];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
+_headers = _headers 		+ ["H-Barrier (Small) (1 Block)"];
+_classes = _classes 		+ ["Land_HBarrier_1_F"];
+_prices = _prices 			+ [20];
+_placements = _placements 	+ [[0, 7]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ [["H-Barrier (Small) (5 Block)",[["CanAutoAlign", 6, 0]]]];
+_classes = _classes 		+ ["Land_HBarrier_5_F"];
+_prices = _prices 			+ [100];
+_placements = _placements 	+ [[0, 7]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ [["H-Barrier (Big) (4 Block)",[["CanAutoAlign", 6, 0]]]];
+_classes = _classes 		+ ["Land_HBarrier_Big_F"];
+_prices = _prices 			+ [200];
+_placements = _placements 	+ [[0, 7]];
+_categories = _categories 	+ ["Fortification"];
+
 /*_headers = _headers 		+ [["High Wall (Concrete)",[["CanAutoAlign", 4.6, 0]]]];
 _classes = _classes 		+ ["Land_CncWall4_F"];
 _prices = _prices 			+ [20];
