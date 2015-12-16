@@ -552,7 +552,7 @@ _u = _u + [1];
 _f = _f + [CTI_FACTORY_NAVAL];
 _s = _s + [""];
 
-_c = _c + ['C_Boat_Civil_01_police_F'];
+_c = _c + ['C_Boat_Civil_01_F'];
 _p = _p + [''];
 _n = _n + [(format ["Naval Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE])];
 _o = _o + [6000];
