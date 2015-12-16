@@ -537,7 +537,7 @@ _u = _u		+ [0];
 _p = _p		+ [10];
 //--- Uniforms
 _i = _i		+ ["U_O_CombatUniform_ocamo"];
-_u = _u		+ [0];
+_u = _u		+ [1];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_O_GhillieSuit"];
@@ -545,50 +545,50 @@ _u = _u		+ [3];
 _p = _p		+ [600];
 
 _i = _i		+ ["U_O_PilotCoveralls"];
-_u = _u		+ [1];
+_u = _u		+ [2];
 _p = _p		+ [100];
 
 _i = _i		+ ["U_O_CombatUniform_oucamo"];
-_u = _u		+ [0];
+_u = _u		+ [1];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_O_SpecopsUniform_ocamo"];
-_u = _u		+ [2];
+_u = _u		+ [3];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_O_SpecopsUniform_blk"];
-_u = _u		+ [2];
+_u = _u		+ [3];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_O_Wetsuit"];
-_u = _u		+ [2];
+_u = _u		+ [3];
 _p = _p		+ [450];
 
 
 _i = _i		+ ["U_OG_Guerilla1_1"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
 
 _i = _i		+ ["U_OG_Guerilla2_1"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
 
 _i = _i		+ ["U_OG_Guerilla2_2"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_OG_Guerilla2_3"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_OG_Guerilla3_1"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_OG_Guerilla3_2"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
 
