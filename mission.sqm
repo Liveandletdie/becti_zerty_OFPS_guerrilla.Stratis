@@ -17,7 +17,7 @@ class Mission
 		"A3_Soft_F_Truck",
 		"A3_Boat_F_Civilian_Boat",
 		"A3_Characters_F_Civil",
-		//"3DEN"
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
@@ -25,12 +25,7 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"a3_characters_f",
 		"A3_Characters_F_BLUFOR",
-		"A3_Soft_F_Kart_Kart_01",
-		"A3_Soft_F_Car",
-		"A3_Soft_F_Truck",
-		"A3_Boat_F_Civilian_Boat",
-		"A3_Characters_F_Civil",
-		//"3DEN",
+		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Structures_F_Mil_Flags",
 		"a3_map_stratis"
@@ -58,7 +53,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=12;
+		items=14;
 		class Item0
 		{
 			side="LOGIC";
@@ -808,7 +803,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					syncId=51;
-					synchronizations[]={50};
+					synchronizations[]={50,52,53};
 				};
 			};
 		};
@@ -930,14 +925,112 @@ class Mission
 				};
 			};
 		};
+		class Item12
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7126.8311,3.0152905,5964.2939};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=60;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="ADMIN_ZEUS_1";
+					syncId=52;
+					synchronizations[]={51};
+				};
+			};
+		};
+		class Item13
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7132.687,0,5955.5068};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=61;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="ADMIN_ZEUS_1_1";
+					syncId=53;
+					synchronizations[]={51};
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
 		items=34;
 		class Item0
 		{
-			position[]={5022.2573,208.5887,5906.6309};
-			id=60;
+			position[]={5016.918,208.17653,5889.8745};
+			id=62;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -948,7 +1041,7 @@ class Mission
 		class Item1
 		{
 			position[]={4793.2417,193.14821,4396.438};
-			id=61;
+			id=63;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -959,7 +1052,7 @@ class Mission
 		class Item2
 		{
 			position[]={2196.8152,3.9810913,1898.271};
-			id=62;
+			id=64;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -970,7 +1063,7 @@ class Mission
 		class Item3
 		{
 			position[]={1876.9342,5.5976744,5744.6006};
-			id=63;
+			id=65;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -981,7 +1074,7 @@ class Mission
 		class Item4
 		{
 			position[]={2449.5134,2.9148207,1152.0181};
-			id=64;
+			id=66;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -992,7 +1085,7 @@ class Mission
 		class Item5
 		{
 			position[]={1715.4276,5.5,5125.1514};
-			id=65;
+			id=67;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1003,7 +1096,7 @@ class Mission
 		class Item6
 		{
 			position[]={5350.1157,11.535686,3785.916};
-			id=66;
+			id=68;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1014,7 +1107,7 @@ class Mission
 		class Item7
 		{
 			position[]={2015.2489,4.0034299,2701.7217};
-			id=67;
+			id=69;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1025,7 +1118,7 @@ class Mission
 		class Item8
 		{
 			position[]={6060.9839,17.729935,5632.3042};
-			id=68;
+			id=70;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1036,7 +1129,7 @@ class Mission
 		class Item9
 		{
 			position[]={3289.3965,229.17999,2932.3662};
-			id=69;
+			id=71;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1047,7 +1140,7 @@ class Mission
 		class Item10
 		{
 			position[]={3372.9761,7.2348213,5743.6846};
-			id=70;
+			id=72;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1058,7 +1151,7 @@ class Mission
 		class Item11
 		{
 			position[]={2039.475,2.250782,4118.5625};
-			id=71;
+			id=73;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1069,7 +1162,7 @@ class Mission
 		class Item12
 		{
 			position[]={1983.9342,2.52,3558.375};
-			id=72;
+			id=74;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1080,7 +1173,7 @@ class Mission
 		class Item13
 		{
 			position[]={4000.665,119.49027,6328.5508};
-			id=73;
+			id=75;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1091,7 +1184,7 @@ class Mission
 		class Item14
 		{
 			position[]={4093.2095,221.23,4596.563};
-			id=74;
+			id=76;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1102,7 +1195,7 @@ class Mission
 		class Item15
 		{
 			position[]={2984.2712,171.39864,1867.1943};
-			id=75;
+			id=77;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1113,7 +1206,7 @@ class Mission
 		class Item16
 		{
 			position[]={3520.6282,200.94272,4923.2539};
-			id=76;
+			id=78;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1124,7 +1217,7 @@ class Mission
 		class Item17
 		{
 			position[]={2895.6331,3.367691,6053.2134};
-			id=77;
+			id=79;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1135,7 +1228,7 @@ class Mission
 		class Item18
 		{
 			position[]={5259.6699,223.52972,5038.1865};
-			id=78;
+			id=80;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1146,7 +1239,7 @@ class Mission
 		class Item19
 		{
 			position[]={5518.8022,78.073288,4713.9048};
-			id=79;
+			id=81;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1157,7 +1250,7 @@ class Mission
 		class Item20
 		{
 			position[]={4494.1504,107.11714,6791.4023};
-			id=80;
+			id=82;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1168,7 +1261,7 @@ class Mission
 		class Item21
 		{
 			position[]={2853.6416,37.583435,3750.9932};
-			id=81;
+			id=83;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1179,7 +1272,7 @@ class Mission
 		class Item22
 		{
 			position[]={4343.127,225.15318,3796.2141};
-			id=82;
+			id=84;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1190,7 +1283,7 @@ class Mission
 		class Item23
 		{
 			position[]={6372.3853,8.0600004,5336.5527};
-			id=83;
+			id=85;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1201,7 +1294,7 @@ class Mission
 		class Item24
 		{
 			position[]={4352.02,177.30383,4330.5469};
-			id=84;
+			id=86;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1212,7 +1305,7 @@ class Mission
 		class Item25
 		{
 			position[]={4276.8311,3.3544581,2685.9883};
-			id=85;
+			id=87;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1223,7 +1316,7 @@ class Mission
 		class Item26
 		{
 			position[]={2588.4758,82.834061,5484.832};
-			id=86;
+			id=88;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1234,7 +1327,7 @@ class Mission
 		class Item27
 		{
 			position[]={2252.7161,3.1444328,4715.9326};
-			id=87;
+			id=89;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1245,7 +1338,7 @@ class Mission
 		class Item28
 		{
 			position[]={3253.5068,2.8479297,6857.356};
-			id=88;
+			id=90;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1256,7 +1349,7 @@ class Mission
 		class Item29
 		{
 			position[]={4158.2354,157.14674,3288.5986};
-			id=89;
+			id=91;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1267,7 +1360,7 @@ class Mission
 		class Item30
 		{
 			position[]={4215.7407,37.632671,5329.835};
-			id=90;
+			id=92;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1278,7 +1371,7 @@ class Mission
 		class Item31
 		{
 			position[]={6233.6768,-0.49042404,2371.0293};
-			id=91;
+			id=93;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1289,7 +1382,7 @@ class Mission
 		class Item32
 		{
 			position[]={2058.2329,-0.12589478,7205.2051};
-			id=92;
+			id=94;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
@@ -1300,7 +1393,7 @@ class Mission
 		class Item33
 		{
 			position[]={465.21213,0.17144716,3098.0908};
-			id=93;
+			id=95;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			leader=1;
