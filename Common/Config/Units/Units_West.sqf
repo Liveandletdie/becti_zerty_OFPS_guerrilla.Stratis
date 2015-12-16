@@ -554,12 +554,21 @@ _s = _s + [""];
 
 _c = _c + ['B_Boat_Armed_01_minigun_F'];
 _p = _p + [''];
-_n = _n + [(format ["Assault Boat Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE])];
-_o = _o + [6000];
+_n = _n + [''];
+_o = _o + [3000];
 _t = _t + [25];
 _u = _u + [1];
 _f = _f + [CTI_FACTORY_NAVAL];
-_s = _s + ["service-medic"];
+_s = _s + [""];
+
+_c = _c + ['B_Lifeboat'];
+_p = _p + [''];
+_n = _n + [(format ["Inflatable Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE])];
+_o = _o + [3000];
+_t = _t + [25];
+_u = _u + [1];
+_f = _f + [CTI_FACTORY_NAVAL];
+_s = _s + [""];
 
 _c = _c + ['B_SDV_01_F'];
 _p = _p + [''];
