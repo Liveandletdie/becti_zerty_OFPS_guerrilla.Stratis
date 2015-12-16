@@ -13,13 +13,13 @@ missionNamespace setVariable [format["CTI_%1_Pilot", _side], "b_g_soldier_unarme
 missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 	["B_Truck_01_medical_F", [
 		["30Rnd_9x21_Mag", 100],
-		//["arifle_MXM_F", 1],
+		["arifle_MX_GL_F", 2],
 		//["launch_NLAW_F", 5], ["NLAW_F", 20],
 		["HandGrenade", 20],
 		//["30Rnd_556x45_Stanag", 15],
 		//["30Rnd_65x39_caseless_mag_Tracer", 6],
 		//["3rnd_he_grenade_shell", 8],
-		//["3Rnd_UGL_FlareWhite_F", 9],
+		["3Rnd_UGL_FlareWhite_F", 90],
 		//["3rnd_smokeblue_grenade_shell", 3],
 		["SmokeShellBlue", 8],
 		["firstaidkit", 20],
