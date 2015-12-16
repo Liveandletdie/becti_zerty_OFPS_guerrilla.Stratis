@@ -82,7 +82,7 @@ _u = _u		+ ["B_UGV_01_rcws_F"];
 _u = _u  	+ ["B_Truck_01_medical_F"];
 _u = _u		+ ['B_Slingload_01_Medevac_F'];
 _u = _u		+ ['C_Van_01_transport_F']; //SS83 Omon's cars
-_u = _u		+ ['C_Kart_01_Blu_F'];
+_u = _u		+ ['C_Kart_01_F'];
 _u = _u		+ ['C_Hatchback_01_sport_F'];
 _u = _u		+ ['C_Hatchback_01_F'];
 
@@ -152,7 +152,7 @@ missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_NAVAL], _u];
 //--- Units - FLAG
 _u = ['B_Soldier_lite_F'];
 _u = _u		+ ['C_Van_01_transport_F']; //SS83 Omon's cars
-_u = _u		+ ['C_Kart_01_Blu_F'];
+_u = _u		+ ['C_Kart_01_F'];
 _u = _u		+ ['C_Hatchback_01_sport_F'];
 _u = _u		+ ['C_Hatchback_01_F'];
 _u = _u		+ ["B_G_Offroad_01_F"];
