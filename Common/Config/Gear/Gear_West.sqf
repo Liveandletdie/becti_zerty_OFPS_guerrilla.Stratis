@@ -655,11 +655,11 @@ _p = _p		+ [15];
 
 //--- Uniforms
 _i = _i		+ ["U_B_CombatUniform_mcam"];
-_u = _u		+ [0];
+_u = _u		+ [1];
 _p = _p		+ [10];
 
 _i = _i		+ ["U_B_CombatUniform_mcam_tshirt"];
-_u = _u		+ [0];
+_u = _u		+ [1];
 _p = _p		+ [10];
 
 _i = _i		+ ["U_B_CombatUniform_mcam_vest"];
@@ -667,27 +667,27 @@ _u = _u		+ [1];
 _p = _p		+ [10];
 
 _i = _i		+ ["U_B_CombatUniform_wdl"];
-_u = _u		+ [0];
+_u = _u		+ [2];
 _p = _p		+ [10];
 
 _i = _i		+ ["U_B_CombatUniform_wdl_tshirt"];
-_u = _u		+ [0];
+_u = _u		+ [2];
 _p = _p		+ [10];
 
 _i = _i		+ ["U_B_CombatUniform_wdl_vest"];
-_u = _u		+ [1];
+_u = _u		+ [2];
 _p = _p		+ [10];
 
 _i = _i		+ ["U_B_CombatUniform_sgg"];
-_u = _u		+ [1];
+_u = _u		+ [2];
 _p = _p		+ [10];
 
 _i = _i		+ ["U_B_CombatUniform_sgg_tshirt"];
-_u = _u		+ [1];
+_u = _u		+ [2];
 _p = _p		+ [10];
 
 _i = _i		+ ["U_B_CombatUniform_sgg_vest"];
-_u = _u		+ [1];
+_u = _u		+ [2];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_B_SpecopsUniform_sgg"];
@@ -712,15 +712,15 @@ _u = _u		+ [3];
 _p = _p		+ [600];
 
 _i = _i		+ ["U_B_HeliPilotCoveralls"];
-_u = _u		+ [1];
+_u = _u		+ [2];
 _p = _p		+ [100];
 
 _i = _i		+ ["U_B_PilotCoveralls"];
-_u = _u		+ [1];
+_u = _u		+ [3];
 _p = _p		+ [100];
 
 _i = _i		+ ["U_B_Wetsuit"];
-_u = _u		+ [2];
+_u = _u		+ [3];
 _p = _p		+ [450];
 
 _i = _i		+ ["U_B_survival_uniform"];
@@ -728,35 +728,35 @@ _u = _u		+ [1];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_Competitor"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [100];
 
 _i = _i		+ ["U_Rangemaster"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [100];
 
 _i = _i		+ ["U_BG_Guerilla1_1"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 /*
 _i = _i		+ ["U_BG_Guerilla2_1"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_BG_Guerilla2_2"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_BG_Guerilla2_3"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_BG_Guerilla3_1"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
 _i = _i		+ ["U_BG_Guerilla3_2"];
-_u = _u		+ [1];
+_u = _u		+ [0];
 _p = _p		+ [150]; 
 
 //--- Vests
