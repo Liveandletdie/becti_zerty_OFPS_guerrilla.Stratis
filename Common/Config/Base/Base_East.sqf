@@ -347,6 +347,20 @@ _prices = _prices 			+ [100];
 _placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Fortification"];
 
+_headers = _headers 		+ ["Double Portable Light"];
+_classes = _classes 		+ ["Land_PortableLight_double_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ ["Portable Generator"];
+_classes = _classes 		+ ["Land_Portable_generator_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+
+
 _headers = _headers 		+ [["Long Sandbag", [["DMG_Reduce", 2]]]];
 _classes = _classes 		+ ["Land_BagFence_Long_F"];
 _prices = _prices 			+ [5];
