@@ -169,7 +169,7 @@ _u = _u + [0];
 _f = _f + [CTI_FACTORY_LIGHT];
 _s = _s + [""];
 
-_c = _c + ['C_Kart_01_Red_F'];
+_c = _c + ['C_Kart_01_F'];
 _p = _p + [''];
 _n = _n + [''];
 _o = _o + [250];
