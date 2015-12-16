@@ -472,7 +472,7 @@ _p = _p + [''];
 _n = _n + [(format ["AirRspwn(DLC ONLY)- Range %1 m",CTI_RESPAWN_MOBILE_RANGE])];
 _o = _o + [10000];
 _t = _t + [40];
-_u = _u + [1];
+_u = _u + [2];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + ["service-medic"];
 
@@ -501,7 +501,7 @@ _p = _p + [''];
 _n = _n + [''];
 _o = _o + [30000];
 _t = _t + [40];
-_u = _u + [2];
+_u = _u + [3];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + [""];
 /*

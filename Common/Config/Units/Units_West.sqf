@@ -460,7 +460,7 @@ _p = _p + [''];
 _n = _n + [(format ["Hellcat Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE])]; //ss83 added mobile respawn heli
 _o = _o + [12000];
 _t = _t + [20];
-_u = _u + [1];
+_u = _u + [2];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + ["service-medic"];
 
@@ -501,7 +501,7 @@ _p = _p + [''];
 _n = _n + [''];
 _o = _o + [8000];
 _t = _t + [50];
-_u = _u + [2];
+_u = _u + [3];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + [""];
 /*
