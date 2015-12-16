@@ -17,7 +17,7 @@ class Mission
 		"A3_Soft_F_Truck",
 		"A3_Boat_F_Civilian_Boat",
 		"A3_Characters_F_Civil",
-		"3DEN"
+		//"3DEN"
 	};
 	addOnsAuto[]=
 	{
@@ -25,7 +25,7 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"a3_characters_f",
 		"A3_Characters_F_BLUFOR",
-		"3DEN",
+		//"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Structures_F_Mil_Flags",
 		"a3_map_stratis"
