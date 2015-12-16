@@ -21,7 +21,7 @@ CTI_UI_Purchase_GetFirstAvailableFactories = {
 
 	_structures = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures;
 	_towns = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideTowns;
-	_factories = [CTI_BARRACKS, CTI_LIGHT, CTI_HEAVY, CTI_AIR, CTI_REPAIR, CTI_AMMO, CTI_NAVAL];
+	_factories = [CTI_BARRACKS, CTI_LIGHT, CTI_HEAVY, CTI_NAVAL, CTI_AIR, CTI_REPAIR, CTI_AMMO];
 	_availables = [];
 	{_availables = _availables + ([_x, _structures, player, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetSideStructuresByType)} forEach _factories;
 	_availables = _availables + ([CTI_FTOWN, _towns, player, CTI_TOWNS_CAPTURE_RANGE] call CTI_CO_FNC_GetSideStructuresByType);
@@ -43,10 +43,10 @@ CTI_UI_Purchase_GetFirstAvailableFactories = {
 			case CTI_BARRACKS: {CTI_FACTORY_BARRACKS};
 			case CTI_LIGHT: {CTI_FACTORY_LIGHT};
 			case CTI_HEAVY: {CTI_FACTORY_HEAVY};
+			case CTI_NAVAL: {CTI_FACTORY_NAVAL};
 			case CTI_AIR: {CTI_FACTORY_AIR};
 			case CTI_REPAIR: {CTI_FACTORY_REPAIR};
 			case CTI_AMMO: {CTI_FACTORY_AMMO};
-			case CTI_NAVAL: {CTI_FACTORY_NAVAL};
 			case CTI_FTOWN: {CTI_FACTORY_TOWN};
 			default {-1};
 		};
