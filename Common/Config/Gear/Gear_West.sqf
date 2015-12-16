@@ -628,11 +628,11 @@ _p = _p		+ [4000];
 _i = _i		+ ["launch_NLAW_F"];
 _u = _u		+ [0];
 _p = _p		+ [1000];
-
+*/
 _i = _i		+ ["launch_B_Titan_F"];
 _u = _u		+ [2];
 _p = _p		+ [2000];
-
+/*
 _i = _i		+ ["launch_B_Titan_short_F"];
 _u = _u		+ [3];
 _p = _p		+ [3000];

@@ -503,11 +503,11 @@ _p = _p		+ [2200];
 _i = _i		+ ["launch_RPG32_F"];
 _u = _u		+ [1];
 _p = _p		+ [4000];
-/*
+
 _i = _i		+ ["launch_O_Titan_F"];
 _u = _u		+ [2];
 _p = _p		+ [2000];
-
+/*
 _i = _i		+ ["launch_O_Titan_short_F"];
 _u = _u		+ [3];
 _p = _p		+ [3000]; */
