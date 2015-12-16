@@ -965,7 +965,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="Town2";
-			init="nullReturn = [this, ""Strogos Bay"", resistance, 150] execVM ""Common\Init\Init_Location.sqf""";
+			init="nullReturn = [this, ""Strogos Bay"", resistance, 150,""Town7""] execVM ""Common\Init\Init_Location.sqf""";
 		};
 		class Item3
 		{
