@@ -327,6 +327,12 @@ _prices = _prices 			+ [50];
 _placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Flag"];
 
+_headers = _headers 		+ ["Warning Sign- Mines"];
+_classes = _classes 		+ ["Land_Sign_Mines_F"];
+_prices = _prices 			+ [1];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Sign"];
+
 
 _headers = _headers 		+ ["Campfire"];
 _classes = _classes 		+ ["FirePlace_burning_F"];
