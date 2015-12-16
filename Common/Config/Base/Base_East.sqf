@@ -210,21 +210,27 @@ _prices = _prices 			+ [20];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
+*/
 
+_headers = _headers 		+ ["H-Barrier (Small) (1 Block)"];
+_classes = _classes 		+ ["Land_HBarrier_1_F"];
+_prices = _prices 			+ [20];
+_placements = _placements 	+ [[0, 7]];
+_categories = _categories 	+ ["Fortification"];
 
-_headers = _headers 		+ ["H-Barrier (Medium)"];
+_headers = _headers 		+ [["H-Barrier (Small) (5 Block)",[["CanAutoAlign", 6, 0]]]];
 _classes = _classes 		+ ["Land_HBarrier_5_F"];
-_prices = _prices 			+ [20];
+_prices = _prices 			+ [100];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
-
-_headers = _headers 		+ [["H-Barrier (Big)",[["CanAutoAlign", 6, 0]]]];
-_classes = _classes 		+ ["Land_HBarrierBig_F"];
-_prices = _prices 			+ [20];
+_headers = _headers 		+ [["H-Barrier (Big) (4 Block)",[["CanAutoAlign", 6, 0]]]];
+_classes = _classes 		+ ["Land_HBarrier_Big_F"];
+_prices = _prices 			+ [200];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
+*/
 _headers = _headers 		+ ["H-Barrier Wall (6)"];
 _classes = _classes 		+ ["Land_HBarrierWall6_F"];
 _prices = _prices 			+ [40];
@@ -242,7 +248,7 @@ _classes = _classes 		+ ["Land_HBarrierTower_F"];
 _prices = _prices 			+ [40];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
-*/
+
 
 if ((missionNamespace getVariable "CTI_RESPAWN_FOB_RANGE")> 0) then {
 	_headers = _headers 		+ [["FOB",[["RuinOnDestroyed", "Land_Medevac_house_V1_ruins_F"], ["FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_fobs")}; (_cpt < CTI_BASE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0)|| ( missionNamespace getVariable 'CTI_BASE_FOB_PERMISSION' ) == 0 )}]]]];
