@@ -560,7 +560,7 @@ _s = _s + [""];
 
 _c = _c + ['C_Boat_Civil_01_police_F'];
 _p = _p + [''];
-_n = _n + [(format ["Naval Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE])];
+_n = _n + [(format ["Respawn Shore Required - Range %1 m",CTI_RESPAWN_MOBILE_RANGE])];
 _o = _o + [6000];
 _t = _t + [25];
 _u = _u + [1];

@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////////////
 
 _funds = [group player, CTI_P_SideJoined] call CTI_CO_FNC_GetFunds;
-_playerside = [group player, CTI_P_SideJoined] call CTI_CO_FNC_GetSideID;
+_side =(_side_id)  call CTI_CO_FNC_GetSideFromID;
 if (_funds < 10000) exitWith {hintsilent "Not enough funds"; sleep 1 ; hintsilent ""};
 
 if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader group player) == player && [CTI_P_SideJoined, CTI_UPGRADE_AIRSTRIKE, 1] call CTI_CO_FNC_HasUpgrade && ( (missionNamespace getVariable 'CTI_SM_AIRSTRIKE')==1)) then {
@@ -57,7 +57,7 @@ _angorig = _ang - 180;
 _origpos = [_pos1, 4000, _angorig] call BIS_fnc_relPos;
 _finpos = [_pos2, 4000, _ang] call BIS_fnc_relPos;
 
-_planefn = [_origpos, _ang, "B_Plane_CAS_01_F", _playerside] call bis_fnc_spawnvehicle;
+_planefn = [_origpos, _ang, "B_Plane_CAS_01_F", WEST] call bis_fnc_spawnvehicle;
 _plane = _planefn select 0;
 _plane setPosATL [getPosATL _plane select 0, getPosATL _plane select 1, 1000];
 _plane disableAI "TARGET";
