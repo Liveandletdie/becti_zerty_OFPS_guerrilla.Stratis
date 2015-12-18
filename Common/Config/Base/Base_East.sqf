@@ -198,6 +198,12 @@ _prices = _prices 			+ [20];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
+_headers = _headers 		+ [["High Wall Gate (Mil)",[["CanAutoAlign", 3.8, 0]]]];
+_classes = _classes 		+ ["Land_Mil_WallBig_Gate_F"];
+_prices = _prices 			+ [20];
+_placements = _placements 	+ [[0, 7]];
+_categories = _categories 	+ ["Fortification"];
+
 /*_headers = _headers 		+ [["High Wall (Concrete)",[["CanAutoAlign", 4.6, 0]]]];
 _classes = _classes 		+ ["Land_CncWall4_F"];
 _prices = _prices 			+ [20];
@@ -209,11 +215,11 @@ _classes = _classes 		+ ["Land_RampConcreteHigh_F"];
 _prices = _prices 			+ [20];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
-
+*/
 _headers = _headers 		+ ["H-Barrier (Small) (1 Block)"];
 _classes = _classes 		+ ["Land_HBarrier_1_F"];
 _prices = _prices 			+ [20];
-_placements = _placements 	+ [[0, 7]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ [["H-Barrier (Small) (5 Block)",[["CanAutoAlign", 6, 0]]]];
@@ -228,6 +234,19 @@ _prices = _prices 			+ [200];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
+_headers = _headers 		+ [["ISO Wall (Short)",[["CanAutoAlign", 6, 0]]]];
+_classes = _classes 		+ ["Land_Cargo20_red_F"];
+_prices = _prices 			+ [100];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ [["ISO Wall (Long)",[["CanAutoAlign", 6, 0]]]];
+_classes = _classes 		+ ["Land_Cargo40_red_F"];
+_prices = _prices 			+ [100];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Fortification"];
+
+/*
 _headers = _headers 		+ ["H-Barrier Wall (6)"];
 _classes = _classes 		+ ["Land_HBarrierWall6_F"];
 _prices = _prices 			+ [40];
@@ -347,12 +366,6 @@ _categories = _categories 	+ ["Fortification"];
 _headers = _headers 		+ ["Tent"];
 _classes = _classes 		+ ["Land_TentA_F"];
 _prices = _prices 			+ [50];
-_placements = _placements 	+ [[90, 15]];
-_categories = _categories 	+ ["Fortification"];
-
-_headers = _headers 		+ ["ISO Wall"];
-_classes = _classes 		+ ["Land_Cargo20_red_F"];
-_prices = _prices 			+ [100];
 _placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Fortification"];
 
