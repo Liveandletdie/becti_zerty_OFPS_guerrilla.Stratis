@@ -19,7 +19,7 @@ _p = _p + [''];
 _n = _n + ['Unarmed Soldier-Equip him!'];
 _o = _o + [100];
 _t = _t + [5];
-_u = _u + [1];
+_u = _u + [0];
 _f = _f + [CTI_FACTORY_BARRACKS];
 _s = _s + [""];
 
@@ -488,7 +488,7 @@ _p = _p + [''];
 _n = _n + [(format ["Mohawk Airlift"])];
 _o = _o + [10000];
 _t = _t + [40];
-_u = _u + [2];
+_u = _u + [1];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + [""];
 
@@ -498,17 +498,14 @@ _p = _p + [''];
 _n = _n + [(format ["HURON Heavy Airlift (DLC ONLY)"])];
 _o = _o + [10000];
 _t = _t + [40];
-_u = _u + [2];
+_u = _u + [3];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + [""];
-
-
-
 
 _c = _c + ['B_Heli_Light_01_armed_F'];
 _p = _p + [''];
 _n = _n + [''];
-_o = _o + [8000];
+_o = _o + [15000];
 _t = _t + [50];
 _u = _u + [3];
 _f = _f + [CTI_FACTORY_AIR];

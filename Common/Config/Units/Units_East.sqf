@@ -17,7 +17,7 @@ _p = _p + [''];
 _n = _n + ['Unarmed Soldier-Equip him!'];
 _o = _o + [100];
 _t = _t + [5];
-_u = _u + [1];
+_u = _u + [0];
 _f = _f + [CTI_FACTORY_BARRACKS];
 _s = _s + [""];
 
@@ -426,7 +426,7 @@ _p = _p + [''];
 _n = _n + [(format ["Mohawk Lift"])];
 _o = _o + [12000];
 _t = _t + [40];
-_u = _u + [2];
+_u = _u + [1];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + [""];
 
@@ -491,7 +491,7 @@ _p = _p + [''];
 _n = _n + [(format ["Hellcat Rspwn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE])];
 _o = _o + [12000];
 _t = _t + [20];
-_u = _u + [1];
+_u = _u + [2];
 _f = _f + [CTI_FACTORY_AIR];
 _s = _s + ["service-medic"];
 
@@ -499,7 +499,7 @@ _s = _s + ["service-medic"];
 _c = _c + ['O_Heli_Light_02_F'];
 _p = _p + [''];
 _n = _n + [''];
-_o = _o + [30000];
+_o = _o + [15000];
 _t = _t + [40];
 _u = _u + [3];
 _f = _f + [CTI_FACTORY_AIR];
