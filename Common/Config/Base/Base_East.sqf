@@ -246,6 +246,24 @@ _prices = _prices 			+ [100];
 _placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Fortification"];
 
+_headers = _headers 		+ [["Long Sandbag", [["DMG_Reduce", 2]]]];
+_classes = _classes 		+ ["Land_BagFence_Long_F"];
+_prices = _prices 			+ [5];
+_placements = _placements 	+ [[0, 5]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ [["Short Sandbag", [["DMG_Reduce", 2]]]];
+_classes = _classes 		+ ["Land_BagFence_Short_F"];
+_prices = _prices 			+ [5];
+_placements = _placements 	+ [[0, 5]];
+_categories = _categories 	+ ["Fortification"];
+
+_headers = _headers 		+ [["Round Sandbag", [["DMG_Reduce", 2]]]];
+_classes = _classes 		+ ["Land_BagFence_Round_F"];
+_prices = _prices 			+ [5];
+_placements = _placements 	+ [[0, 5]];
+_categories = _categories 	+ ["Fortification"];
+
 /*
 _headers = _headers 		+ ["H-Barrier Wall (6)"];
 _classes = _classes 		+ ["Land_HBarrierWall6_F"];
@@ -381,32 +399,23 @@ _prices = _prices 			+ [50];
 _placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Fortification"];
 
-
-
-_headers = _headers 		+ [["Long Sandbag", [["DMG_Reduce", 2]]]];
-_classes = _classes 		+ ["Land_BagFence_Long_F"];
-_prices = _prices 			+ [5];
-_placements = _placements 	+ [[0, 5]];
+_headers = _headers 		+ ["Fusion Generator"];
+_classes = _classes 		+ ["Land_Device_assembled_F"];
+_prices = _prices 			+ [500];
+_placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Fortification"];
 
-_headers = _headers 		+ [["Short Sandbag", [["DMG_Reduce", 2]]]];
-_classes = _classes 		+ ["Land_BagFence_Short_F"];
-_prices = _prices 			+ [5];
-_placements = _placements 	+ [[0, 5]];
+_headers = _headers 		+ ["Supply Pallet 1"];
+_classes = _classes 		+ ["Land_Pallet_MilBoxes_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Fortification"];
 
-_headers = _headers 		+ [["Round Sandbag", [["DMG_Reduce", 2]]]];
-_classes = _classes 		+ ["Land_BagFence_Round_F"];
-_prices = _prices 			+ [5];
-_placements = _placements 	+ [[0, 5]];
+_headers = _headers 		+ ["Supply Pallet 2"];
+_classes = _classes 		+ ["Land_PaperBox_open_full_F"];
+_prices = _prices 			+ [50];
+_placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Fortification"];
-
-_headers = _headers 		+ [["Shed (Land)",[["RuinOnDestroyed", "Land_Shed_Small_ruins_F"], ["DMG_Reduce", 5]]]];
-_classes = _classes 		+ ["Land_Shed_Small_F"];
-_prices = _prices 			+ [200];
-_placements = _placements 	+ [[180, 15]];
-_categories = _categories 	+ ["Structures_Industrial"];
-
 
 
 _headers = _headers 		+ ["Gate"];
