@@ -57,7 +57,7 @@ class Params {
 		title = "INCOME: Starting Funds (East Commander)";
 		values[] = {40000,50000,60000,70000,80000,90000,100000,125000,150000,200000};
 		texts[] = {"$40000","$50000","$60000","$70000","$80000","$90000","$100000","$125000","$150000","$200000"};
-		default = 600000;
+		default = 60000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_EAST {
 		title = "INCOME: Starting Funds (East Players)";
@@ -69,7 +69,7 @@ class Params {
 		title = "INCOME: Starting Funds (West Commander)";
 		values[] = {40000,50000,60000,70000,80000,90000,100000,125000,150000,200000};
 		texts[] = {"$40000","$50000","$60000","$70000","$80000","$90000","$100000","$125000","$150000","$200000"};
-		default = 600000;
+		default = 60000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_WEST {
 		title = "INCOME: Starting Funds (West Players)";

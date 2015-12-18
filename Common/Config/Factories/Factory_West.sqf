@@ -102,7 +102,7 @@ _u = _u		+ ["B_MBT_01_cannon_F"];
 _u = _u		+ ["B_MBT_01_TUSK_F"];
 if !(MADE_FOR_STRATIS) then {
 _u = _u		+ ["B_MBT_01_arty_F"];
-_u = _u		+ ["B_MBT_01_mlrs_F"];};
+_u = _u		+ ["B_MBT_01_mlrs_F"];
 };
 /*
 _u = _u		+ ['I_APC_Wheeled_03_cannon_F'];

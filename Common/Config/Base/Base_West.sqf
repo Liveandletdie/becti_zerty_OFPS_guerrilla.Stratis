@@ -216,7 +216,8 @@ _prices = _prices 			+ [200];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
-/*_headers = _headers 		+ [["High Wall (Concrete)",[["CanAutoAlign", 4.6, 0]]]];
+/*
+_headers = _headers 		+ [["High Wall (Concrete)",[["CanAutoAlign", 4.6, 0]]]];
 _classes = _classes 		+ ["Land_CncWall4_F"];
 _prices = _prices 			+ [20];
 _placements = _placements 	+ [[0, 7]];
@@ -228,14 +229,11 @@ _prices = _prices 			+ [20];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
-
-
 _headers = _headers 		+ ["H-Barrier (Medium)"];
 _classes = _classes 		+ ["Land_HBarrier_5_F"];
 _prices = _prices 			+ [20];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
-
 
 _headers = _headers 		+ [["H-Barrier (Big)",[["CanAutoAlign", 6, 0]]]];
 _classes = _classes 		+ ["Land_HBarrierBig_F"];
@@ -333,7 +331,6 @@ _prices = _prices 			+ [1];
 _placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Sign"];
 
-
 _headers = _headers 		+ ["Campfire"];
 _classes = _classes 		+ ["FirePlace_burning_F"];
 _prices = _prices 			+ [50];
@@ -369,7 +366,6 @@ _classes = _classes 		+ ["Land_Cargo20_blue_F"];
 _prices = _prices 			+ [100];
 _placements = _placements 	+ [[90, 15]];
 _categories = _categories 	+ ["Fortification"];
-
 
 _headers = _headers 		+ ["Double Portable Light"];
 _classes = _classes 		+ ["Land_PortableLight_double_F"];
