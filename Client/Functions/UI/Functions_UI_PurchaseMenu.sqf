@@ -65,8 +65,8 @@ CTI_UI_Purchase_FillUnitsList = {
 		case CTI_BARRACKS: {CTI_UPGRADE_BARRACKS};
 		case CTI_LIGHT: {CTI_UPGRADE_LIGHT};
 		case CTI_HEAVY: {CTI_UPGRADE_HEAVY};
-		case CTI_AIR: {CTI_UPGRADE_AIR};
 		case CTI_NAVAL: {CTI_UPGRADE_NAVAL};
+		case CTI_AIR: {CTI_UPGRADE_AIR};
 		default {-1};
 	};
 	_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;

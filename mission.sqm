@@ -16,7 +16,6 @@ class Mission
 		"A3_Soft_F_Car",
 		"A3_Soft_F_Truck",
 		"A3_Boat_F_Civilian_Boat",
-		"A3_Boat_F_Boat_Transport_01",
 		"A3_Characters_F_Civil"
 		//"3DEN"
 	};
@@ -719,7 +718,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7114.042,4.9777002,5960.2363};
+					position[]={7115.7832,5.1439695,5972.1489};
 					class args
 					{
 						items=4;
@@ -768,7 +767,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7106.686,7.8348665,5950.9097};
+					position[]={7117.1348,7.8261437,5941.8628};
 					class args
 					{
 						items=4;
@@ -932,7 +931,7 @@ class Mission
 		items=34;
 		class Item0
 		{
-			position[]={5016.918,208.17653,5889.8745};
+			position[]={5022.2573,208.5887,5906.6309};
 			id=60;
 			side="EMPTY";
 			vehicle="FlagPole_F";

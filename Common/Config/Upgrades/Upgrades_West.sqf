@@ -170,7 +170,7 @@ _t=_t+				[[10*CTI_UPGRADE_RATIO,20*CTI_UPGRADE_RATIO,40*CTI_UPGRADE_RATIO,80*CT
 
 _l=_l+				[["Airstrikes: Carpet Bomb", "Unlock Airstrike Ability"]];
 _a=_a	+			[true];
-_c=_c +				[[50000]];
+_c=_c +				[[100000]];
 _lev=_lev+			[1];
 _lin=_lin+	[[[CTI_UPGRADE_AIR, 3]]];
 _t=_t+			[[600*CTI_UPGRADE_RATIO]];

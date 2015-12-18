@@ -8,10 +8,10 @@ missionNamespace setVariable [format["CTI_%1_Base_Template", _side], [
 	[CTI_LIGHT, 180, [23,33]],
 	[CTI_CONTROLCENTER, 0, [30,-40]],
 	[CTI_HEAVY, 0, [-30,-40]],
+	[CTI_NAVAL, 180, [80,37]],
 	[CTI_AIR, 180, [-60,37]],
 	[CTI_REPAIR, 180, [60,37]],
-	[CTI_AMMO, 180, [80,37]],
-	[CTI_NAVAL, 180, [80,37]]
+	[CTI_AMMO, 180, [80,37]]
 ]];
 
 //--- Commander course of action ["Action", Parameter(s), Condition]
@@ -27,8 +27,8 @@ missionNamespace setVariable [format["CTI_%1_Commander_Path", _side], [
 	["upgrade", [CTI_UPGRADE_TOWNS, 1], {true}],
 	["upgrade", [CTI_UPGRADE_GEAR, 2], {true}],
 	["upgrade", [CTI_UPGRADE_LIGHT, 2], {true}],
-	["build-structures", CTI_NAVAL, {true}],
 	["build-structures", CTI_HEAVY, {true}],
+	["build-structures", CTI_NAVAL, {true}],
 	["build-structures", CTI_REPAIR, {true}],
 	["build-structures", CTI_AMMO, {true}],	
 	["upgrade", [CTI_UPGRADE_NAVAL, 1], {true}],
@@ -93,6 +93,13 @@ _times = _times 			+ [120];
 _placements = _placements 	+ [[90, 25]];
 _specials = _specials		+ [[["DMG_Reduce", .75]]];
 
+_headers = _headers 		+ [[CTI_NAVAL, "Naval Yard", "Naval"]];
+_classes = _classes 		+ [["Land_Lighthouse_small_F", "Land_Lighthouse_small_ruins_F"]];
+_prices = _prices 			+ [4000];
+_times = _times 			+ [35];
+_placements = _placements 	+ [[180, 25]];
+_specials = _specials		+ [[["DMG_Alternative"], ["DMG_Reduce", .5]]];
+
 _headers = _headers 		+ [[CTI_AIR, "Aircraft Factory", "Air"]];
 _classes = _classes 		+ [["Land_Radar_Small_F", "Land_Radar_Small_ruins_F"]];
 _prices = _prices 			+ [12000];
@@ -113,13 +120,6 @@ _prices = _prices 			+ [8000];
 _times = _times 			+ [35];
 _placements = _placements 	+ [[90, 25]];
 _specials = _specials		+ [[["DMG_Reduce", .5]]];
-
-_headers = _headers 		+ [[CTI_NAVAL, "Naval Yard", "Naval"]];
-_classes = _classes 		+ [["Land_Lighthouse_small_F", "Land_Lighthouse_small_ruins_F"]];
-_prices = _prices 			+ [4000];
-_times = _times 			+ [35];
-_placements = _placements 	+ [[180, 25]];
-_specials = _specials		+ [[["DMG_Alternative"], ["DMG_Reduce", .5]]];
 
 _headers = _headers 		+ [[CTI_RADAR, "Air Radar", "Air Radar"]];
 _classes =  _classes 		+ [["Land_TTowerBig_2_F", "Land_TTowerBig_2_ruins_F"]];
@@ -210,8 +210,6 @@ _prices = _prices 			+ [20];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
-*/
-
 _headers = _headers 		+ ["H-Barrier (Small) (1 Block)"];
 _classes = _classes 		+ ["Land_HBarrier_1_F"];
 _prices = _prices 			+ [20];
@@ -230,7 +228,6 @@ _prices = _prices 			+ [200];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
-*/
 _headers = _headers 		+ ["H-Barrier Wall (6)"];
 _classes = _classes 		+ ["Land_HBarrierWall6_F"];
 _prices = _prices 			+ [40];
@@ -248,7 +245,7 @@ _classes = _classes 		+ ["Land_HBarrierTower_F"];
 _prices = _prices 			+ [40];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
-
+*/
 
 if ((missionNamespace getVariable "CTI_RESPAWN_FOB_RANGE")> 0) then {
 	_headers = _headers 		+ [["FOB",[["RuinOnDestroyed", "Land_Medevac_house_V1_ruins_F"], ["FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_fobs")}; (_cpt < CTI_BASE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0)|| ( missionNamespace getVariable 'CTI_BASE_FOB_PERMISSION' ) == 0 )}]]]];
