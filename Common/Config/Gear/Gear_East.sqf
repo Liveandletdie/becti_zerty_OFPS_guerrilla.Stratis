@@ -574,14 +574,16 @@ _u = _u		+ [0];
 _p = _p		+ [150];
 
 
-_i = _i		+ ["U_OG_Guerilla2_1"];
+_i = _i		+ ["U_OG_leader"];
 _u = _u		+ [0];
 _p = _p		+ [150];
 
 
-_i = _i		+ ["U_OG_Guerilla2_2"];
+_i = _i		+ ["U_C_WorkerCoveralls"];
 _u = _u		+ [0];
 _p = _p		+ [150];
+
+/*
 
 _i = _i		+ ["U_OG_Guerilla2_3"];
 _u = _u		+ [0];
@@ -602,7 +604,7 @@ _u = _u		+ [1];
 _p = _p		+ [50];
 
 
-
+*/
 
 
 
