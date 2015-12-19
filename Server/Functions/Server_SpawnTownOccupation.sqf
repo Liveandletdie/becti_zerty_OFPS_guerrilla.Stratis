@@ -96,7 +96,7 @@ switch (true) do {
 		_pool_units = [[["SOLDIER", 3], ["SOLDIER_GL", 1], ["SOLDIERS_AT_LIGHT", 2, 35], ["SOLDIERS_AT_MEDIUM", 1, 84], ["SOLDIERS_AT_HEAVY", 2, 75], ["SOLDIER_AA", 1], ["SOLDIER_MEDIC", 2], ["SOLDIERS_MG", 2], ["SOLDIERS_ENGINEER", 1, 75], ["SOLDIERS_SPECOPS", 1], ["SOLDIERS_SNIPERS", 1]], [["VEHICLES_LIGHT", 1, 27], ["VEHICLES_MEDIUM", 1, 45], ["VEHICLES_HEAVY", 1, 42], ["VEHICLES_AA_LIGHT", 1, 30]]];
 	};
 	case (_value > 500) : {
-		_pool_units = [[["NAVAL_BOATS", 6, 95], ["NAVAL_ASSAULT_BOATS", 8, 95]]];
+		_pool_units = [[["NAVAL_INFANTRY", 0, 01], ["NAVAL_BOATS", 6, 95], ["NAVAL_ASSAULT_BOATS", 8, 95]]];
 	};
 };
 
