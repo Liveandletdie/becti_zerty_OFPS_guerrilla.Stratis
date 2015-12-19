@@ -234,12 +234,6 @@ _prices = _prices 			+ [200];
 _placements = _placements 	+ [[0, 7]];
 _categories = _categories 	+ ["Fortification"];
 
-_headers = _headers 		+ [["ISO Wall (Short)",[["CanAutoAlign", 6, 0]]]];
-_classes = _classes 		+ ["Land_Cargo20_red_F"];
-_prices = _prices 			+ [100];
-_placements = _placements 	+ [[0, 10]];
-_categories = _categories 	+ ["Fortification"];
-
 _headers = _headers 		+ [["Long Sandbag", [["DMG_Reduce", 2]]]];
 _classes = _classes 		+ ["Land_BagFence_Long_F"];
 _prices = _prices 			+ [5];
@@ -348,67 +342,67 @@ _categories = _categories 	+ ["Flag"];
 _headers = _headers 		+ ["Warning Sign- Mines"];
 _classes = _classes 		+ ["Land_Sign_Mines_F"];
 _prices = _prices 			+ [1];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Sign"];
 
 _headers = _headers 		+ ["Campfire"];
 _classes = _classes 		+ ["Campfire_burning_F"];
 _prices = _prices 			+ [50];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ ["Camp Chair"];
 _classes = _classes 		+ ["Land_CampingChair_V2_F"];
 _prices = _prices 			+ [50];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ ["Camp Table"];
 _classes = _classes 		+ ["Land_CampingTable_F"];
 _prices = _prices 			+ [50];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ ["Latrine"];
 _classes = _classes 		+ ["Land_FieldToilet_F"];
 _prices = _prices 			+ [50];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ ["Tent"];
 _classes = _classes 		+ ["Land_TentA_F"];
 _prices = _prices 			+ [50];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ ["Double Portable Light"];
 _classes = _classes 		+ ["Land_PortableLight_double_F"];
 _prices = _prices 			+ [50];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ ["Portable Generator"];
 _classes = _classes 		+ ["Land_Portable_generator_F"];
 _prices = _prices 			+ [50];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ ["Fusion Generator"];
 _classes = _classes 		+ ["Land_Device_assembled_F"];
 _prices = _prices 			+ [500];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ ["Supply Pallet 1"];
 _classes = _classes 		+ ["Land_Pallet_MilBoxes_F"];
 _prices = _prices 			+ [50];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ ["Supply Pallet 2"];
 _classes = _classes 		+ ["Land_PaperBox_open_full_F"];
 _prices = _prices 			+ [50];
-_placements = _placements 	+ [[90, 15]];
+_placements = _placements 	+ [[90, 7]];
 _categories = _categories 	+ ["Fortification"];
 
 
