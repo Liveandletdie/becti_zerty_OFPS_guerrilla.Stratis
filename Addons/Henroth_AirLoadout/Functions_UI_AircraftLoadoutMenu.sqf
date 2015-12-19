@@ -768,6 +768,12 @@ CTI_AC_UI_LOCK_IF_NOT_RESEARCHED_MOUNT_N =
 	{
 		_disable = 1;
 	};
+	
+	// Check if DAR
+	if ( ( _mount_magazine_classname in CTI_ALM_DAR_RESEARCHED_MAGAZINES ) && ( ( _upgrades select CTI_UPGRADE_AIR_DAR ) == 0 ) ) then
+	{
+		_disable = 1;
+	};	
 
 	// Check if CM
 	switch (missionNamespace getVariable "CTI_VEHICLES_AIR_CM") do

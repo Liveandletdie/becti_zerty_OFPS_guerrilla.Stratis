@@ -30,7 +30,6 @@ _magazines = magazines _vehicle;
 
 _specialweapons = ["Rocket_03_AP_F","Rocket_03_HE_F","Rocket_04_AP_F","Rocket_04_HE_F"]; // Wipeout and Neophron rockets have missilebase parents and not rocketbase parents for some reason. http://feedback.arma3.com/view.php?id=18283
 
-
 _weapons_remove = [];
 _magazines_remove = [];
 

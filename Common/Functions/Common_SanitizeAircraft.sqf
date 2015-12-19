@@ -20,6 +20,7 @@
   # DEPENDENCIES #
 	Common Function: CTI_CO_FNC_GetSideUpgrades
 	Common Function: CTI_CO_FNC_SanitizeAircraftFFAR
+	Common Function: CTI_CO_FNC_SanitizeAircraftDAR
 	Common Function: CTI_CO_FNC_SanitizeAircraftAT
 	Common Function: CTI_CO_FNC_SanitizeAircraftAA
 	Common Function: CTI_CO_FNC_SanitizeAircraftCM
@@ -38,6 +39,9 @@ _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 
 //--- We check the FFAR loadout
 if (_upgrades select CTI_UPGRADE_AIR_FFAR < 1) then {_vehicle call CTI_CO_FNC_SanitizeAircraftFFAR};
+
+//--- We check the DAR loadout
+if (_upgrades select CTI_UPGRADE_AIR_DAR < 1) then {_vehicle call CTI_CO_FNC_SanitizeAircraftDAR};
 
 //--- We check the AT Loadout
 switch (missionNamespace getVariable "CTI_VEHICLES_AIR_AT") do {

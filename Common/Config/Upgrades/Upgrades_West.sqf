@@ -62,6 +62,12 @@ _lev=_lev+	[1];
 _lin=_lin+	[[[CTI_UPGRADE_AIR, 1]]];
 _t=_t+			[[90*CTI_UPGRADE_RATIO]];
 
+_l=_l+			[["Air: Aircraft DAR", "Unlocks the DAR Rockets for Aircraft"]];
+_a=_a	+			[false];
+_c=_c +			[[5000]];
+_lev=_lev+	[1];
+_lin=_lin+	[[[CTI_UPGRADE_AIR, 1]]];
+_t=_t+			[[90*CTI_UPGRADE_RATIO]];
 
 _l=_l+			[["Air: Aircraft AT", "Unlocks the Anti Tank Missiles for Aircraft"]];
 _a=_a	+			[false];

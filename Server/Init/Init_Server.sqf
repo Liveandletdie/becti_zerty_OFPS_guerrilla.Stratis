@@ -141,6 +141,7 @@ while {! (((getMarkerPos format ["HELO_START_%1", _i])select 0) == 0)} do
 	_upgrades = [];
 	for '_i' from 1 to count(missionNamespace getVariable format["CTI_%1_UPGRADES_LEVELS", _side]) do { _upgrades pushBack 0 };
 	if ((missionNamespace getvariable "CTI_VEHICLES_AIR_FFAR")==2) then {_upgrades set [CTI_UPGRADE_AIR_FFAR,10]};
+	if ((missionNamespace getvariable "CTI_VEHICLES_AIR_DAR")==2) then {_upgrades set [CTI_UPGRADE_AIR_DAR,10]};
 	if ((missionNamespace getvariable "CTI_VEHICLES_AIR_AA") ==2)then {_upgrades set [CTI_UPGRADE_AIR_AT,10]};
 	if( (missionNamespace getvariable "CTI_VEHICLES_AIR_AT")==2 ) then {_upgrades set [CTI_UPGRADE_AIR_AA,10]};
 	if ((missionNamespace getvariable "CTI_VEHICLES_AIR_CM")==2) then {_upgrades set [CTI_UPGRADE_AIR_CM,10]};

@@ -1551,6 +1551,12 @@ CTI_ALM_FFAR_RESEARCHED_MAGAZINES =
 	"24Rnd_missiles"
 ];
 
+CTI_ALM_DAR_RESEARCHED_MAGAZINES =
+[
+	"24Rnd_missiles" ,
+	"12Rnd_missiles"
+];
+
 CTI_ALM_CM_RESEARCHED_MAGAZINES =
 [
 	"60Rnd_CMFlareMagazine" ,

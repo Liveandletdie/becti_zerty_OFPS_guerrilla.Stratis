@@ -119,6 +119,12 @@ class Params {
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
 		default = 0;
 	};
+	class CTI_VEHICLES_AIR_DAR {
+		title = "UNITS: Aircraft DAR";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 0;
+	};
 	class CTI_VEHICLES_AIR_AA {
 		title = "UNITS: Aircraft AA Missiles";
 		values[] = {0,1,2};

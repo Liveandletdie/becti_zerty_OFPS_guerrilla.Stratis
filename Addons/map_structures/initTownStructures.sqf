@@ -136,10 +136,10 @@ _object = createVehicle ["Land_cargo_house_slum_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 270;
 _object setPosATL _pos;
 
-_pos = [459.541412,3115.407227,125.569];
-_object = createVehicle ["Land_Tank_rust_F", _pos, [], 0, "CAN_COLLIDE"];
-_object setDir 9.53674e-006;
-_object setPosATL _pos;
+//_pos = [459.541412,3115.407227,125.569];
+//_object = createVehicle ["Land_Tank_rust_F", _pos, [], 0, "CAN_COLLIDE"];
+//_object setDir 9.53674e-006;
+//_object setPosATL _pos;
 
 _pos = [443.424744,3098.516846,121.146];
 _object = createVehicle ["Land_Pier_addon", _pos, [], 0, "CAN_COLLIDE"];

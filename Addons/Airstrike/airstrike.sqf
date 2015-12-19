@@ -62,7 +62,7 @@ _plane = _planefn select 0;
 _plane setPosATL [getPosATL _plane select 0, getPosATL _plane select 1, 1000];
 _plane disableAI "TARGET";
 _plane disableAI "AUTOTARGET";
-_plane flyInHeight 300;
+_plane flyInHeight 1000;
 
 
 _wp1 = group _plane addWaypoint [_pos1, 0];
@@ -96,7 +96,7 @@ _plane = _planefn select 0;
 _plane setPosATL [getPosATL _plane select 0, getPosATL _plane select 1, 1000];
 _plane disableAI "TARGET";
 _plane disableAI "AUTOTARGET";
-_plane flyInHeight 300;
+_plane flyInHeight 1000;
 
 
 _wp1 = group _plane addWaypoint [_pos1, 0];
