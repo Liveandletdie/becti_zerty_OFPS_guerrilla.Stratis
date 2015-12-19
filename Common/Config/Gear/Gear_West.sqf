@@ -723,15 +723,15 @@ _i = _i		+ ["U_B_Wetsuit"];
 _u = _u		+ [3];
 _p = _p		+ [450];
 
-_i = _i		+ ["U_B_survival_uniform"];
-_u = _u		+ [1];
+_i = _i		+ ["U_C_Poor_1"];
+_u = _u		+ [0];
 _p = _p		+ [150];
 
-_i = _i		+ ["U_Competitor"];
+_i = _i		+ ["U_BG_Guerilla2_2"];
 _u = _u		+ [0];
 _p = _p		+ [100];
 
-_i = _i		+ ["U_Rangemaster"];
+_i = _i		+ ["U_BG_Guerilla2_1"];
 _u = _u		+ [0];
 _p = _p		+ [100];
 
