@@ -758,7 +758,7 @@ _p = _p		+ [150];
 _i = _i		+ ["U_BG_Guerilla3_2"];
 _u = _u		+ [0];
 _p = _p		+ [150]; 
-
+*/
 //--- Vests
 _i = _i		+ ["V_Rangemaster_belt"];
 _u = _u		+ [0];
