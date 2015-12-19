@@ -237,13 +237,7 @@ _categories = _categories 	+ ["Fortification"];
 _headers = _headers 		+ [["ISO Wall (Short)",[["CanAutoAlign", 6, 0]]]];
 _classes = _classes 		+ ["Land_Cargo20_red_F"];
 _prices = _prices 			+ [100];
-_placements = _placements 	+ [[0, 15]];
-_categories = _categories 	+ ["Fortification"];
-
-_headers = _headers 		+ [["ISO Wall (Long)",[["CanAutoAlign", 6, 0]]]];
-_classes = _classes 		+ ["Land_Cargo40_red_F"];
-_prices = _prices 			+ [100];
-_placements = _placements 	+ [[0, 15]];
+_placements = _placements 	+ [[0, 35]];
 _categories = _categories 	+ ["Fortification"];
 
 _headers = _headers 		+ [["Long Sandbag", [["DMG_Reduce", 2]]]];
