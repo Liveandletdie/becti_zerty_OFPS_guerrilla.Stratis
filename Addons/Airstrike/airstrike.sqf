@@ -1,6 +1,7 @@
 ///////////////////////////////////////////////////////////
 //                CALL IN AIRSTRIKE ON MAP CLICK	    //
 /////////////////////////////////////////////////////////
+private ["_pos1","_pos2","_ang","_angorig","_origpos","_finpos","_planefn","_plane","_wp1","_wp2","_wp3"];
 
 _funds = [group player, CTI_P_SideJoined] call CTI_CO_FNC_GetFunds;
 
@@ -48,6 +49,7 @@ if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader gro
 	CTI_AIRSTRIKE_LASTTIME=time;
 
 	player sideChat "Coordinates received. Proceeding with designated vector";
+	
 	if (CTI_P_SideJoined == west) then {
 	_pos1 = getMarkerPos "BRStart";
 	_pos2 = getMarkerPos "BREnd";

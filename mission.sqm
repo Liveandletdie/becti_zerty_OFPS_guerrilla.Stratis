@@ -960,7 +960,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="Town2";
-			init="nullReturn = [this, ""Strogos Bay"", resistance, 150] execVM ""Common\Init\Init_Location.sqf""";
+			init="nullReturn = [this, ""Strogos Bay"", resistance, 150,""Town33""] execVM ""Common\Init\Init_Location.sqf""";
 		};
 		class Item3
 		{
@@ -1015,7 +1015,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="Town7";
-			init="nullReturn = [this, ""Girna"", resistance, 250] execVM ""Common\Init\Init_Location.sqf""";
+			init="nullReturn = [this, ""Girna"", resistance, 250,""Town33""] execVM ""Common\Init\Init_Location.sqf""";
 		};
 		class Item8
 		{
@@ -1301,7 +1301,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="Town33";
-			init="nullReturn = [this, ""Fuel Depot"", resistance, 550,""Town2""] execVM ""Common\Init\Init_Location.sqf""; this setPos [getPos this select 0, getPos this select 1,+4.6];";
+			init="nullReturn = [this, ""Fuel Depot"", resistance, 550] execVM ""Common\Init\Init_Location.sqf""; this setPos [getPos this select 0, getPos this select 1,+4.6];";
 		};
 	};
 	class Markers
