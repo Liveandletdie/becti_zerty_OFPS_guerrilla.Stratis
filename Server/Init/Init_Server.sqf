@@ -219,6 +219,20 @@ while {! (((getMarkerPos format ["HELO_START_%1", _i])select 0) == 0)} do
 			sleep 10;
 		};
 	};
+	
+	//--- Disable Thermals and Statics
+	if ( (missionNamespace getVariable 'CTI_SM_NV_THER_VEH')==1) then {
+		0 spawn {
+			while {! CTi_GameOver} do {
+				{
+					_x disableTIEquipment true;
+					_x disableNVGEquipment true;
+				}
+				forEach vehicles;
+				sleep 10;
+			};
+		};
+	};
 
 	_logic setVariable ["cti_teams", _teams, true];
 

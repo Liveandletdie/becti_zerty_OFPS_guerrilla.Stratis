@@ -399,7 +399,7 @@ CTI_BASE_CONSTRUCTION_RATIO_ON_DEATH = 0.60; //--- The completion ratio is multi
 //--- Base: Defenses
 // CTI_BASE_DEFENSES_AUTO_DELAY = 240; //--- Delay after which a new unit will replace a dead one for a defense
 CTI_BASE_DEFENSES_AUTO_DELAY = 300; //--- Delay after which a new unit will replace a dead one for a defense
-CTI_BASE_DEFENSES_AUTO_LIMIT = 5; //--- Amount of independent units which may man nearby defenses
+CTI_BASE_DEFENSES_AUTO_LIMIT = 6; //--- Amount of independent units which may man nearby defenses
 CTI_BASE_DEFENSES_AUTO_RANGE = 600; //--- Range from the nearest barrack at which AI may auto man a defense
 CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 600; //--- Range needed for a defense to be able to rearm at a service point
 CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 1200; //--- Delay after which an empty defense is considered empty
@@ -658,6 +658,7 @@ with missionNamespace do {
 	if (isNil "CTI_SM_RADAR") then {CTI_SM_RADAR=1};
 	if (isnil "CTI_SM_FAR") then {CTI_SM_FAR = 1};
 	if (isnil "CTI_SM_NONV") then {CTI_SM_NONV = 1};
+	if (isnil "CTI_SM_NV_THER_VEH") then {CTI_SM_NV_THER_VEH = 0};
 	if (isnil "CTI_SM_PATROLS") then {CTI_SM_PATROLS = 0};
 	if (isnil "CTI_SM_PATROLS_NUMBER") then {CTI_SM_PATROLS_NUMBER = 0};
 	if (isnil "CTI_SM_TCAS") then {CTI_SM_TCAS = 600};

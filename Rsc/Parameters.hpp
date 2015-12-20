@@ -339,6 +339,12 @@ class Params {
 		texts[] = {"false","true"};
 		default = 1;
 	};
+	class CTI_SM_NV_THER_VEH {
+		title = "Zerty: GAMEPLAY: Disable NVs, Thermal on Vehicles, Statics";
+		values[] = {0,1};
+		texts[] = {"false","true"};
+		default = 1;
+	};
 	class CTI_ECONOMY_BASE_PLAYER_INCOME {
 		title = "Zerty: INCOME: base income for players";
 		values[] = {0,10,25,50,100,150,200,250};

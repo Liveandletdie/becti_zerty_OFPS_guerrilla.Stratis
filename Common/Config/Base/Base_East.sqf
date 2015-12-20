@@ -280,13 +280,13 @@ if ((missionNamespace getVariable "CTI_RESPAWN_FOB_RANGE")> 0) then {
 	_placements = _placements 	+ [[180, 15]];
 	_categories = _categories 	+ ["Fortification"];
 };
-/*
+
 _headers = _headers 		+ ["MG Defense"];
 _classes = _classes 		+ ["O_HMG_01_High_F"];
-_prices = _prices 			+ [1500];
+_prices = _prices 			+ [2000];
 _placements = _placements 	+ [[180, 5]];
 _categories = _categories 	+ ["Defense"];
-
+/*
 _headers = _headers 		+ ["GL Defense"];
 _classes = _classes 		+ ["O_GMG_01_high_F"];
 _prices = _prices 			+ [1800];
@@ -298,13 +298,13 @@ _classes = _classes 		+ ["O_static_AT_F"];
 _prices = _prices 			+ [3000];
 _placements = _placements 	+ [[180, 5]];
 _categories = _categories 	+ ["Defense"];
-
+*/
 _headers = _headers 		+ ["AA Defense"];
 _classes = _classes 		+ ["O_static_AA_F"];
-_prices = _prices 			+ [2000];
+_prices = _prices 			+ [2500];
 _placements = _placements 	+ [[180, 5]];
 _categories = _categories 	+ ["Defense"];
-*/
+
 
 if !(MADE_FOR_STRATIS) then {
 _headers = _headers 		+ ["Mortar"];
