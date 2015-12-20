@@ -81,7 +81,7 @@ class FSM
        "" \n
        "_objects=[];" \n
        "{if ((_x distance _town) <=  CTI_TOWNS_CAPTURE_RANGE) then {_objects set [count _objects,_x];};true} count _p_objects;" \n
-       "_objects=_objects unitsBelowHeight 100;" \n
+       "_objects=_objects unitsBelowHeight 150;" \n
        "" \n
        "" \n
        "_west = west countSide _objects;" \n
