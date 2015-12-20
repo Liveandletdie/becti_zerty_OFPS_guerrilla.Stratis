@@ -194,7 +194,7 @@ if (_vehicle isKindOf "Car" && ! isnil "H_PROTECT_WHEELS") then {
 _vehicle spawn {
 	while { !isNull _this && alive _this && ! cti_gameover } do {
 		    sleep 20;
-		    if ((([_this,getMarkerPos "CTI_TUTORIAL"] call  BIS_fnc_distance2D) < 1000) && !isNull _this && alive _this) then {_this setDamage 1};
+		    if ((([_this,getMarkerPos "CTI_TUTORIAL"] call  BIS_fnc_distance2D) < 300) && !isNull _this && alive _this) then {_this setDamage 1};
 		};
 };
 
