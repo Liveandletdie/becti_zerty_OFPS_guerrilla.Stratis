@@ -85,7 +85,7 @@ class FSM
        "		profileNamespace setVariable [""CTI_SAVE_ENABLED"",false];" \n
        "		saveProfileNamespace;" \n
        "	};" \n
-       "	if (_townvalue > (_total_value*0.65) && !CTI_GameOver) exitWith {" \n  //ss83 Victory if 65% of towns captured
+       "	if (_townvalue > (_total_value*0.75) && !CTI_GameOver) exitWith {" \n  //ss83 Victory if 75% of towns captured
        "		[""CLIENT"", ""Client_OnMissionEnding"", [_x, ""win""]] call CTI_CO_FNC_NetSend;" \n
        "		CTI_GameOver = true;" \n
        "		profileNamespace setVariable [""CTI_SAVE_ENABLED"",false];" \n

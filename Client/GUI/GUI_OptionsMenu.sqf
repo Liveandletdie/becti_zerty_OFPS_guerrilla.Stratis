@@ -44,7 +44,7 @@ while { true } do {
 					_last_income = _income;
 				};
 				if (_held != _last_townheld) then {
-					((uiNamespace getVariable "cti_dialog_ui_optionsmenu") displayCtrl 130004) ctrlSetStructuredText (parseText format["<t>Towns Held Value: <t color='#66baff'>%1 $</t>/ %2 $</t><t color='#ff9900'> :: Victory : %3 $</t>", _held, _town_count,floor (_town_count * 0.65)]);  //victory at 65%
+					((uiNamespace getVariable "cti_dialog_ui_optionsmenu") displayCtrl 130004) ctrlSetStructuredText (parseText format["<t>Towns Held Value: <t color='#66baff'>%1 $</t>/ %2 $</t><t color='#ff9900'> :: Victory : %3 $</t>", _held, _town_count,floor (_town_count * 0.75)]);  //victory at 75%
 					_last_townheld = _held;
 				};};
 	};

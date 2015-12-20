@@ -434,7 +434,7 @@ class Params {
 		title = "Zerty: WEATHER: day duration";
 		values[] = {1,2,3,4,5,6,7,8,9,10,11,12};
 		texts[] = {"1 hour","2 hours","3 hours","4 hours","5 hours","6 hours","7 hours","8 hours","9 hours","10 hours","11 hours","12 hours"};
-		default = 5;
+		default = 3;
 	};
   	class CTI_WEATHER_FAST_NIGTH {
 		title = "Zerty: WEATHER: Night duration";
@@ -553,7 +553,7 @@ class Params {
 		title = "Airstrikes: Enabled";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};	
 	class CTI_SM_RADAR {
 		title = "Zerty: Air Radar: Enabled";
