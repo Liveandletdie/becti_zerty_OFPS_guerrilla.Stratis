@@ -175,17 +175,23 @@ _prices = _prices 			+ [150];
 _placements = _placements 	+ [[0, 15]];
 _categories = _categories 	+ ["Fortification"];
 
+_headers = _headers 		+ [["Cargo Tower (big)",[["RuinOnDestroyed", "Land_Cargo_Tower_V1_ruins_F"], ["DMG_Reduce", 8]]]];
+_classes = _classes 		+ ["Land_Cargo_Tower_V1_F"];
+_prices = _prices 			+ [5000];
+_placements = _placements 	+ [[0, 30]];
+_categories = _categories 	+ ["Fortification"];
+
 _headers = _headers 		+ [["Shed (Roof)",[["RuinOnDestroyed", "Land_Shed_Big_ruins_F"], ["DMG_Reduce", 8]]]];
 _classes = _classes 		+ ["Land_Shed_Big_F"];
 _prices = _prices 			+ [40];
 _placements = _placements 	+ [[0, 15]];
 _categories = _categories 	+ ["Fortification"];
 
-_headers = _headers 		+ [["Cargo Tower (big)",[["RuinOnDestroyed", "Land_Cargo_Tower_V1_ruins_F"], ["DMG_Reduce", 8]]]];
-_classes = _classes 		+ ["Land_Cargo_Tower_V1_F"];
-_prices = _prices 			+ [5000];
-_placements = _placements 	+ [[0, 30]];
-_categories = _categories 	+ ["Fortification"];
+_headers = _headers 		+ [["Shed (Land)",[["RuinOnDestroyed", "Land_Shed_Small_ruins_F"], ["DMG_Reduce", 5]]]];
+_classes = _classes 		+ ["Land_Shed_Small_F"];
+_prices = _prices 			+ [200];
+_placements = _placements 	+ [[90, 15]];
+_categories = _categories 	+ ["Structures_Industrial"];
 
 _headers = _headers 		+ [["Fence",[["CanAutoAlign", 7.5, 0]]]];
 _classes = _classes 		+ ["Land_Mil_WiredFence_F"];
