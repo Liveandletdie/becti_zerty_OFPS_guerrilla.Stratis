@@ -43,6 +43,6 @@ switch (_script) do {
 	case "service-ammotruck": {_vehicle setVariable ["cti_spec", [CTI_SPECIAL_AMMOTRUCK], true]};
 	case "service-fueltruck": {_vehicle setVariable ["cti_spec", [CTI_SPECIAL_FUELTRUCK], true]};
 	case "service-gear": {_vehicle setVariable ["cti_spec", [CTI_SPECIAL_GEAR], true]};
-
+	case "nuke-truck": {_vehicle setVariable ["cti_spec", [CTI_SPECIAL_NUKETRUCK], true]};
 	case "service-medic": {if ((missionNamespace getVariable "CTI_RESPAWN_MOBILE") > 0) then {_vehicle setVariable ["cti_spec", [CTI_SPECIAL_MEDICALVEHICLE], true]}};
 };

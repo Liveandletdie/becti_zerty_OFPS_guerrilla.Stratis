@@ -236,6 +236,15 @@ _u = _u + [0];
 _f = _f + [CTI_FACTORY_LIGHT];
 _s = _s + [""];
 
+_c = _c + ['O_Truck_03_device_F'];
+_p = _p + [''];
+_n = _n + [(format ["Nuke Truck"])];
+_o = _o + [80000];
+_t = _t + [25];
+_u = _u + [4];
+_f = _f + [CTI_FACTORY_LIGHT];
+_s = _s + ["nuke-truck"];
+
 /*
 _c = _c + ['B_UGV_01_F'];
 _p = _p + [''];
@@ -333,7 +342,6 @@ _f = _f + [CTI_FACTORY_HEAVY];
 _s = _s + [""];
 
 */
-
 
 _c = _c + ['B_Truck_01_Repair_F'];  
 _p = _p + [''];

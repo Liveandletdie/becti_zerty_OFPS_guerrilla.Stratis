@@ -554,6 +554,12 @@ class Params {
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 0;
+	};
+	class CTI_SM_NUKE {
+		title = "Nuclear Capabilities: Enabled";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
 	};	
 	class CTI_SM_RADAR {
 		title = "Zerty: Air Radar: Enabled";

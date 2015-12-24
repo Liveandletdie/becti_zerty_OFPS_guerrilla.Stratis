@@ -244,6 +244,15 @@ _u = _u + [2];
 _f = _f + [CTI_FACTORY_LIGHT];
 _s = _s + ["service-medic"];
 
+_c = _c + ['O_Truck_03_device_F'];
+_p = _p + [''];
+_n = _n + [(format ["Nuke Truck"])];
+_o = _o + [80000];
+_t = _t + [25];
+_u = _u + [4];
+_f = _f + [CTI_FACTORY_LIGHT];
+_s = _s + ["nuke-truck"];
+
 /*
 _c = _c + ['O_APC_Wheeled_02_rcws_F'];
 _p = _p + [''];

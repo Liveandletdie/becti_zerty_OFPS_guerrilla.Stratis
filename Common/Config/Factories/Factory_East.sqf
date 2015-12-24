@@ -83,6 +83,8 @@ _u = _u		+ ['C_Van_01_transport_F']; //SS83 Omon's Cars
 _u = _u		+ ['C_Kart_01_F'];
 _u = _u		+ ['C_Hatchback_01_sport_F'];
 _u = _u		+ ['C_Hatchback_01_F'];
+_u = _u		+ ['O_Truck_03_device_F'];
+
 /*
 _u = _u		+ ['I_MRAP_03_F'];
 _u = _u		+ ['I_MRAP_03_hmg_F'];
