@@ -553,7 +553,7 @@ class Params {
 		title = "Airstrikes: Enabled";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class CTI_SM_NUKE {
 		title = "Nuclear Capabilities: Enabled";

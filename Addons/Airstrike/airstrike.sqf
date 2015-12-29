@@ -50,14 +50,20 @@ if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader gro
 
 	player sideChat "Coordinates received. Proceeding with designated vector";
 	
+	playsound "Siren1";
+	sleep 7;
+	playsound "Siren1";
+	sleep 7;
+	playsound "Siren1";
+	
 	if (CTI_P_SideJoined == west) then {
 	_pos1 = getMarkerPos "BRStart";
 	_pos2 = getMarkerPos "BREnd";
 	_ang = [_pos1,_pos2] call BIS_fnc_dirTo;
 	_angorig = _ang - 180;
 
-	_origpos = [_pos1, 4000, _angorig] call BIS_fnc_relPos;
-	_finpos = [_pos2, 4000, _ang] call BIS_fnc_relPos;
+	_origpos = [_pos1, 6000, _angorig] call BIS_fnc_relPos;
+	_finpos = [_pos2, 6000, _ang] call BIS_fnc_relPos;
 
 	_planefn = [_origpos, _ang, "B_Plane_CAS_01_F", WEST] call bis_fnc_spawnvehicle;
 	_plane = _planefn select 0;
@@ -66,12 +72,10 @@ if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader gro
 	_plane disableAI "AUTOTARGET";
 	_plane flyInHeight 1000;
 
-
 	_wp1 = group _plane addWaypoint [_pos1, 0];
 	_wp1 setWaypointType "MOVE";
 	_wp1 setWaypointSpeed "LIMITED";
-	_wp1 setWaypointStatements ["true", "[this] execVM 'Addons\Airstrike\airbomb.sqf'"];
-
+	_wp1 setWaypointStatements ["true", "[(this)] execVM ""Addons\Airstrike\airbomb.sqf"";"];
 
 	_wp2 = group _plane addWaypoint [_pos2, 1];
 	_wp2 setWaypointSpeed "LIMITED";
@@ -80,7 +84,7 @@ if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader gro
 	_wp3 = group _plane addWaypoint [_finpos, 2];
 	_wp3 setWaypointType "MOVE";
 	_wp3 setWaypointSpeed "FULL";
-	_wp3 setWaypointStatements ["true", "{deleteVehicle _x} forEach crew this; deleteVehicle this"];
+	_wp3 setWaypointStatements ["true", "[(this)] execVM ""Addons\Airstrike\airdestroy.sqf"";"];
 
 	waitUntil {sleep 2; currentWaypoint group _plane == 3};
 	} else {
@@ -89,8 +93,8 @@ if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader gro
 	_ang = [_pos1,_pos2] call BIS_fnc_dirTo;
 	_angorig = _ang - 180;
 
-	_origpos = [_pos1, 4000, _angorig] call BIS_fnc_relPos;
-	_finpos = [_pos2, 4000, _ang] call BIS_fnc_relPos;
+	_origpos = [_pos1, 6000, _angorig] call BIS_fnc_relPos;
+	_finpos = [_pos2, 6000, _ang] call BIS_fnc_relPos;
 
 
 	_planefn = [_origpos, _ang, "O_Plane_CAS_02_F", EAST] call bis_fnc_spawnvehicle;
@@ -100,13 +104,11 @@ if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader gro
 	_plane disableAI "AUTOTARGET";
 	_plane flyInHeight 1000;
 
-
 	_wp1 = group _plane addWaypoint [_pos1, 0];
 	_wp1 setWaypointType "MOVE";
 	_wp1 setWaypointSpeed "LIMITED";
-	_wp1 setWaypointStatements ["true", "[this] execVM 'Addons\Airstrike\airbomb.sqf'"];
-
-
+	_wp1 setWaypointStatements ["true", "[(this)] execVM ""Addons\Airstrike\airbomb.sqf"";"];
+	
 	_wp2 = group _plane addWaypoint [_pos2, 1];
 	_wp2 setWaypointSpeed "LIMITED";
 	_wp2 setWaypointType "MOVE";
@@ -114,7 +116,7 @@ if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader gro
 	_wp3 = group _plane addWaypoint [_finpos, 2];
 	_wp3 setWaypointType "MOVE";
 	_wp3 setWaypointSpeed "FULL";
-	_wp3 setWaypointStatements ["true", "{deleteVehicle _x} forEach crew this; deleteVehicle this"];
+	_wp3 setWaypointStatements ["true", "[(this)] execVM ""Addons\Airstrike\airdestroy.sqf"";"];
 
 	waitUntil {sleep 2; currentWaypoint group _plane == 3};
 	};

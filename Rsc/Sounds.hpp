@@ -1,5 +1,5 @@
 class CfgSounds {
-	sounds[] = {prison,Vent,Para,nuke,nuclear_boom,nuclear_heartbeat,nuclear_geiger,geiger_1,geiger_2,geiger_3};
+	sounds[] = {prison,Vent,Para,nuke,nuclear_boom,nuclear_heartbeat,nuclear_geiger,geiger_1,geiger_2,geiger_3,Siren1};
 	class prison {
 		name = "prison";
 		sound[] = {"Rsc\Sounds\prison.ogg", 1, 1.0};
@@ -57,4 +57,10 @@ class CfgSounds {
 		sound[] = {"Addons\nuclear\script\geiger_3.ogg", db+0, 1.0};
 		titles[] = {};
 	};
+	class Siren1
+  {
+    name = "Siren1";
+    sound[] = {"Addons\Airstrike\Sirens.ogg", db-6, 1.0};
+	titles[] = {""};
+  };
 };

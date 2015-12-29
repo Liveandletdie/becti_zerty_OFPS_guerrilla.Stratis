@@ -10,6 +10,6 @@ while {_time > 0} do {
 	if (_time < 1) then {
 		call {[_object] execvm "Addons\nuclear\detonation.sqf";[_object] execvm "Addons\nuclear\config1.sqf"}; playsound "nuke";
 	};
-	sleep 1;
+	sleep 5;
 	hint "Detonation Successful";
 };

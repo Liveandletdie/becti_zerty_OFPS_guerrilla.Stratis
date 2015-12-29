@@ -84,7 +84,6 @@ CTI_CO_FNC_SanitizeAircraftDAR = compileFinal preprocessFileLineNumbers "Common\
 CTI_CO_FNC_SanitizeArtillery = compileFinal preprocessFileLineNumbers "Common\Functions\Common_SanitizeArtillery.sqf";
 CTI_CO_FNC_GetRandomSkill = compileFinal preprocessFileLineNumbers "Addons\AiRandomSkill\RandomSkill.sqf";
 
-
 CTI_CO_FNC_GetSideFlag = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetSideFlag.sqf";
 
 CTI_CO_CustomIterator = 0;
