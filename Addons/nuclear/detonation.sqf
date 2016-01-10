@@ -3,7 +3,10 @@ private ["_object", "_xpos", "_ypos"];
 _object = _this select 0;
 _xpos = getpos _object select 0;
 _ypos = getpos _object select 1;
+
 call compile preprocessfile "Addons\nuclear\config.sqf";
+
+[_object] execvm "Addons\nuclear\config1.sqf";
 
 [_object] execvm "Addons\nuclear\script\destroy.sqf";
 

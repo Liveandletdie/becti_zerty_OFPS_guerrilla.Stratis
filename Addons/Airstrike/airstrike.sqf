@@ -50,13 +50,12 @@ if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader gro
 
 	player sideChat "Coordinates received. Proceeding with designated vector";
 	
-	playsound "Siren1";
-	sleep 7;
-	playsound "Siren1";
-	sleep 7;
-	playsound "Siren1";
+	//Plays siren globally
+	//[{ playSound "Siren1"; }, "BIS_fnc_SPAWN", true, false] call BIS_fnc_MP;
 	
 	if (CTI_P_SideJoined == west) then {
+	[{ playSound "Alarm_BLUFOR"; }, "BIS_fnc_SPAWN", west, false] call BIS_fnc_MP;
+	[{ playSound "Siren1"; }, "BIS_fnc_SPAWN", east, false] call BIS_fnc_MP;
 	_pos1 = getMarkerPos "BRStart";
 	_pos2 = getMarkerPos "BREnd";
 	_ang = [_pos1,_pos2] call BIS_fnc_dirTo;
@@ -88,6 +87,8 @@ if ((CTI_P_SideLogic getVariable "cti_commander") == group player && (leader gro
 
 	waitUntil {sleep 2; currentWaypoint group _plane == 3};
 	} else {
+	[{ playSound "Alarm_OPFOR"; }, "BIS_fnc_SPAWN", east, false] call BIS_fnc_MP;
+	[{ playSound "Siren1"; }, "BIS_fnc_SPAWN", west, false] call BIS_fnc_MP;
 	_pos1 = getMarkerPos "BRStart";
 	_pos2 = getMarkerPos "BREnd";
 	_ang = [_pos1,_pos2] call BIS_fnc_dirTo;

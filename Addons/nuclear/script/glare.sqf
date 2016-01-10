@@ -1,5 +1,4 @@
-private ["_xpos", "_ypos", "_size", "_agl", "_aglz", "_wait", "_trs",
-         "_upposx", "_upposy", "_upposz"];
+private ["_xpos", "_ypos", "_size", "_agl", "_aglz", "_wait", "_trs", "_dist", "_upposx", "_upposy", "_upposz"];
 
 _xpos = _this select 0;
 _ypos = _this select 1;

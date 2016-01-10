@@ -5,7 +5,7 @@ _ypos = _this select 1;
 _dis = _this select 2;
 
 _bombs = [];
-_volume = 30 * ((Strahlungs_radius - _dis) / Strahlungs_radius);
+_volume = 30 * ((radiation_radius - _dis) / radiation_radius);
 for [{_a = 0}, {_a < 360}, {_a = _a + 45}] do
 {
   _bomb = "Land_HelipadEmpty_F" createvehicle [_xpos + _dis * cos _a, _ypos + _dis * sin _a, 0];

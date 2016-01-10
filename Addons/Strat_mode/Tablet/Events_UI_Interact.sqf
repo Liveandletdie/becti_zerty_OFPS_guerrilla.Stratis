@@ -461,6 +461,23 @@ switch (_action) do {
 
 					};
 			    };
+				case 37: { // CTI_Icon_Nuke
+			    	if (vehicle player == player && alive _target) then {
+			    		_ok=false;
+			    		if ((missionNamespace getVariable [format ["%1", typeOf _target],["","","","","","","",""]]) select 7 == "nuke-truck") then {_ok=true};
+
+						if (_ok) then {
+				    		((uiNamespace getVariable "cti_dialog_ui_interractions") displayCtrl (511000+_i)) ctrlSetTextColor [0,0,1,1];
+				    		((uiNamespace getVariable "cti_dialog_ui_interractions") displayCtrl (511000+_i)) ctrlSetPosition [_base_x+(_offset*_base_w),_base_y+_h_offset*_base_h,_base_w,_base_h];
+				    		_offset=_offset+1;
+				    	} else {
+				    		((uiNamespace getVariable "cti_dialog_ui_interractions") displayCtrl (511000+_i)) ctrlSetPosition [_base_x+(_offset*_base_w),_base_y+5,_base_w,_base_h];
+
+				   		};
+			    	} else {
+			    		((uiNamespace getVariable "cti_dialog_ui_interractions") displayCtrl (511000+_i)) ctrlSetPosition [_base_x+(_offset*_base_w),_base_y+5,_base_w,_base_h];
+			    	};
+			    };
 			};
 		};
 		//if (_offset == 0) exitwith {false};
@@ -673,6 +690,10 @@ switch (_action) do {
 		if !((CTI_P_SideLogic getVariable "cti_commander") == group player&& (leader group player) == player && [CTI_P_SideJoined, CTI_UPGRADE_AIRSTRIKE, 1] call CTI_CO_FNC_HasUpgrade && ( (missionNamespace getVariable 'CTI_SM_AIRSTRIKE')==1) && (time - CTI_AIRSTRIKE_LASTTIME >= CTI_AIRSTRIKE_COOLDOWN)) exitwith {false};
 		closedialog 0;
 		0 execvm "Addons\Airstrike\airstrike.sqf"
+	};
+	case "OnNuke": {
+		closedialog 0;
+		[[[_target], "Addons\nuclear\functions\fn_bombTimer.sqf"], "BIS_fnc_execVM", true] call BIS_fnc_MP;
 	};
 	case "OnGroup": {
 		closedialog 0;

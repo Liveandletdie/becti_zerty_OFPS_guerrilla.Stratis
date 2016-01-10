@@ -1,12 +1,12 @@
-private ["_xpos", "_ypos", "_dis", "_damage"];
+private ["_xpos", "_ypos", "_dis", "_damage", "_x"];
 
 _xpos = _this select 0;
 _ypos = _this select 1;
 
-for [{_dis = 300}, {_dis <= strahlungs_radius}, {_dis = _dis + 100}] do
+for [{_dis = 300}, {_dis <= radiation_radius}, {_dis = _dis + 100}] do
 {
-  //[_xpos, _ypos, _dis] exec "wave.sqs";
-  if ( schaden_an ) then
+  [_xpos, _ypos, _dis] exec "Addons\nuclear\script\wave.sqs";
+  if ( damage_on ) then
   {
     if ( _dis < 800 ) then {[_xpos, _ypos, _dis] execvm "Addons\nuclear\script\noise.sqf"};
   };
@@ -28,5 +28,5 @@ for [{_dis = 300}, {_dis <= strahlungs_radius}, {_dis = _dis + 100}] do
 };
 
 
-  [_xpos, _ypos, time] execvm "Addons\nuclear\script\geiger.sqf";
-  [_xpos, _ypos, time] execvm "Addons\nuclear\script\radiation.sqf";
+[_xpos, _ypos, time] execvm "Addons\nuclear\script\geiger.sqf";
+[_xpos, _ypos, time] execvm "Addons\nuclear\script\radiation.sqf";

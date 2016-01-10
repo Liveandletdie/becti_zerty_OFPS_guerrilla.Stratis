@@ -60,7 +60,7 @@ class CfgSounds {
 	class Siren1
   {
     name = "Siren1";
-    sound[] = {"Addons\Airstrike\Sirens.ogg", db-6, 1.0};
+    sound[] = {"Addons\Airstrike\Sirens.ogg", db-1, 1.0};
 	titles[] = {""};
   };
 };

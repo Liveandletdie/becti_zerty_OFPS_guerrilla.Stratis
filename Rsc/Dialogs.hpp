@@ -297,6 +297,13 @@ class CTI_RscInteraction {
 			action = "['OnStrike'] call compile preprocessFileLineNumbers 'Addons\Strat_mode\Tablet\Events_UI_Interact.sqf'";
 			toolTip="Call In Airstrike";
 		};
+		class CTI_Icon_Nuke : CTI_Icon_Tablet {
+			idc = 511037;
+			x = "SafeZoneX + SafeZoneW*0.55";
+			text = "Rsc\Pictures\icon_nuke.paa";
+			action = "['OnNuke'] call compile preprocessFileLineNumbers 'Addons\Strat_mode\Tablet\Events_UI_Interact.sqf'";
+			toolTip="Arm Nuclear Device";
+		};
 	};
 };
 

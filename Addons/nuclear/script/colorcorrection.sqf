@@ -13,3 +13,8 @@
 "filmGrain" ppEffectEnable true; 
 "filmGrain" ppEffectAdjust [0.02, 1, 1, 0.1, 1, false];
 "filmGrain" ppEffectCommit 5;
+
+
+sleep 600;
+"colorCorrections" ppEffectEnable false;
+"filmGrain" ppEffectEnable false; 

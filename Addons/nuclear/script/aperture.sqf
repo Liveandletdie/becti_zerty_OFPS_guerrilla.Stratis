@@ -3,7 +3,7 @@ private ["_xpos", "_ypos", "_aperture", "_distance", "_radius"];
 _xpos = _this select 0;
 _ypos = _this select 1;
 
-_radius = strahlungs_radius * -1;
+_radius = radiation_radius * -1;
 _distance = [_xpos, _ypos, 0] distance player;
 _aperture = 0.5;
 if ( _distance > _radius ) then

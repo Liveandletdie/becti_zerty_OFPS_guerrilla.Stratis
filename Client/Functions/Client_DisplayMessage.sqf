@@ -45,8 +45,14 @@ switch (_message_var) do {
 		(_parameters select 0) groupChat format ["Constructing %1... %2%3", (_var select 0) select 1, _parameters select 2, "%"];
 	};
 	case "commander-disconnected": {HUD_NOTIFICATIONS pushBack ["The current commander has left the game",time+40,"ffffff"]};
-	case "hq-destroyed": {HUD_NOTIFICATIONS pushBack ["The HQ has been destroyed!",time+12000,"ffff00"]};
-	case "hq-repair": {HUD_NOTIFICATIONS pushBack ["The HQ has been repaired",time+12000,"ffff00"]};
+	case "hq-destroyed": {
+		HUD_NOTIFICATIONS pushBack ["The HQ has been destroyed!",time+12000,"ffff00"];
+		playsound "Alarm";
+	};
+	case "hq-repair": {
+		HUD_NOTIFICATIONS pushBack ["The HQ has been repaired",time+12000,"ffff00"];
+		playsound "EventTrack02a_F_EPB";
+	};
 	case "funds-transfer": {HUD_NOTIFICATIONS pushBack [ format ["Got Tranfer from %2:  $%1", _parameters select 0, (name leader (_parameters select 1)) ],time+90,"00bb00"]};
 	case "order-taketowns": {_parameters sideChat "Acknowledged.  Advancing on neutral or enemy towns"};
 	case "order-takeholdtowns": {_parameters sideChat "Acknowledged.  Advancing on neutral or enemy towns with guard duty"};
@@ -83,14 +89,20 @@ switch (_message_var) do {
 	case "structure-attacked": {
 		_var = missionNamespace getVariable (_parameters select 0);
 		HUD_NOTIFICATIONS pushBack [ format ["%1  under attack (%2)!", (_var select 0) select 1, mapGridPosition (_parameters select 1)],180,"ffff00"];
+		playsound "Alarm";
 	};
 	case "structure-teamkill-attempt": {
 		CTI_P_ChatID commandChat format ["Player %1 from group %2 tried to place an explosive near a friendly %3! (the explosive was removed)", _parameters select 0, _parameters select 1, _parameters select 2];
 	};
 	case "teamkill": {HUD_NOTIFICATIONS pushBack ["Watch your fire! you're shooting on friendly!",time+7,"ff0000"];};
 	case "teamswap": {HUD_NOTIFICATIONS pushBack [format ["Player %1 Sent back to the lobby for Teamswaping", _parameters],time+7,"ffffff"];};
-	case "town-capture": {HUD_NOTIFICATIONS pushBack [ format ["Capt. reward for %2: $%1" , _parameters select 1, (_parameters select 0) getVariable "cti_town_name"],time+90,"00bb00"]};
-	case "town-hostilenear": {HUD_NOTIFICATIONS pushBack [ format ["Hostile detected near %1!", _parameters getVariable "cti_town_name"],180,"ffff00"]};
+	case "town-capture": {
+		HUD_NOTIFICATIONS pushBack [ format ["Capt. reward for %2: $%1" , _parameters select 1, (_parameters select 0) getVariable "cti_town_name"],time+90,"00bb00"];
+	};
+	case "town-hostilenear": {
+		HUD_NOTIFICATIONS pushBack [ format ["Hostile detected near %1!", _parameters getVariable "cti_town_name"],180,"ffff00"];
+		playsound "Alarm";
+	};
 	case "upgrade-ended": {
 		HUD_NOTIFICATIONS pushBack [ format ["Up. %1 completed to lvl %2", ((missionNamespace getVariable format["CTI_%1_UPGRADES_LABELS", CTI_P_SideJoined]) select (_parameters select 0)) select 0, (_parameters select 1)],time + 120000,"ffffff"];
 	};

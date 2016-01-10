@@ -32,7 +32,7 @@ _lev=_lev+	[3];
 _lin=_lin+	[[[CTI_UPGRADE_LIGHT,1],[],[]]];
 _t=_t+			[[50*CTI_UPGRADE_RATIO,100*CTI_UPGRADE_RATIO,150*CTI_UPGRADE_RATIO]];
 
-_l=_l+				[["Factory: Naval", "Unlock Better Naval Units"]];
+_l=_l+				[["Factory: Naval Factory", "Unlock Better Naval Units"]];
 _a=_a	+			[true];
 _c=_c +				[[10000]];
 _lev=_lev+			[1];

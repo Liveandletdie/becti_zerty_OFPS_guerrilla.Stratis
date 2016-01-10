@@ -4,6 +4,7 @@
 // ARMED-ASSAULT.DE
 // 06.11.2013
 //////////////////////////////////////////////////////////////
+private ["_xHandle", "_light"];
 
 "dynamicBlur" ppEffectEnable true;
 "dynamicBlur" ppEffectAdjust [1];

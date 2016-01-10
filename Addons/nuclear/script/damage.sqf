@@ -1,13 +1,12 @@
-private ["_xpos", "_ypos", "_vehicles", "_units", "_airs", "_objects", "_distance", "_damage","_wave_radius", "_speed", "_vel"];
+private ["_xpos", "_ypos", "_vehicles", "_units", "_airs", "_objects", "_distance", "_damage","_wave_radius", "_speed", "_vel", "_x"];
 
 _xpos = _this select 0;
 _ypos = _this select 1;
 
-_wave_radius = strahlungs_radius * 1.7;
+_wave_radius = radiation_radius * 1.2;
 
-  _vehicles = nearestobjects [[_xpos, _ypos , 0], ["Car", "Motorcycle", "Tank", "Air", "Ship"], strahlungs_radius * 2.9];
-  _objects = nearestobjects [[_xpos, _ypos, 0], [], _wave_radius];
-
+_vehicles = nearestobjects [[_xpos, _ypos , 0], ["Car", "Motorcycle", "Tank", "Air", "Ship"], radiation_radius * 2.9];
+_objects = nearestobjects [[_xpos, _ypos, 0], [], _wave_radius];
 
 sleep 4;
 
@@ -21,9 +20,9 @@ sleep 4;
 
 [_xpos, _ypos] execvm "Addons\nuclear\script\damage2.sqf";
 
-if ( schaden_an ) then
+if ( damage_on ) then
 {
-  _airs = nearestobjects [[_xpos, _ypos , 0], ["Air"], strahlungs_radius];
+  _airs = nearestobjects [[_xpos, _ypos , 0], ["Air"], radiation_radius];
 } else {
 _airs = main_airs;  };
 {
@@ -31,7 +30,7 @@ _airs = main_airs;  };
   _dir = asin (((getpos _x select 1) - _ypos) / _distance);
   if ( getpos _x select 0 < _xpos ) then {_dir = 180 - _dir};
   _vel = velocity _x;
-  _damage = 1 - _distance / strahlungs_radius;
+  _damage = 1 - _distance / radiation_radius;
   _damage = _damage * _damage;
   _speed = 4 * (_damage + random (_damage / 4));
   _speed = _speed * main_nuclear_blow_speed;
@@ -41,9 +40,7 @@ _airs = main_airs;  };
   _x setdammage ((getdammage _x) + _damage);
 } foreach _airs;
 
-
-  {[_x] execvm "Addons\nuclear\script\electro_pulse.sqf"} foreach _vehicles;
-
+{[_x] execvm "Addons\nuclear\script\electro_pulse.sqf"} foreach _vehicles;
 
 {
   if ( ! (_x iskindof "All") ) then {_x setdammage 1}
@@ -56,7 +53,7 @@ _airs = main_airs;  };
       _dir = asin (((getpos _x select 1) - _ypos) / _distance);
       if ( getpos _x select 0 < _xpos ) then {_dir = 180 - _dir};
       _vel = velocity _x;
-      _damage = 1 - _distance / strahlungs_radius;
+      _damage = 1 - _distance / radiation_radius;
       _damage = _damage * _damage;
       _speed = _damage + random (_damage / 4);
       if ( _x iskindof "Man" ) then {_speed = _speed * 2}

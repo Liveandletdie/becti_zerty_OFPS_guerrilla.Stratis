@@ -1,11 +1,10 @@
-private ["_xpos", "_ypos", "_blast_time", "_radius", "_all_radius", "_current_radius",
-         "_v", "_distance", "_radiation", "_sleep", "_count", "_random"];
+private ["_xpos", "_ypos", "_blast_time", "_radius", "_all_radius", "_current_radius", "_v", "_distance", "_radiation", "_sleep", "_count", "_random"];
 
 _xpos = _this select 0;
 _ypos = _this select 1;
 _blast_time = _this select 2;
 
-_all_radius = strahlungs_radius * 1.3;
+_all_radius = radiation_radius * 1.3;
 _radius = _all_radius;
 _v = _radius / (2 * main_nuclear_half_life);
 

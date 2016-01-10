@@ -11,16 +11,13 @@ deletevehicle _object;
 sleep 3;
 
 _bomb = "Land_HelipadEmpty_F" createvehicle _pos;
-//_bomb = "HelipadEmpty" createvehicle _pos;
-//Land_HelipadEmpty_F
 _bomb allowdammage false;
-_bomb say ["nuclear_boom", strahlungs_radius];
+_bomb say ["nuclear_boom", radiation_radius * 2.9];
 
-//if ( schaden_an ) then {
 playsound "nuclear_boom";
-//};
+
 enableCamShake true;
 addCamShake [5, 20, 10];
-//["_bomb",500,42] call BIS_fnc_destroyCity;
+
 sleep 60;
 deletevehicle _bomb;

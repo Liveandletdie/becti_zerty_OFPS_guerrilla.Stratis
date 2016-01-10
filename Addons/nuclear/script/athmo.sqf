@@ -1,3 +1,5 @@
+private ["_xpos", "_ypos", "_vx", "_vy", "_vz", "_coe", "_ran", "_pos", "_velocity", "_color", "_alpha", "_ps", "_delay"];
+private ["_xpos", "_ypos", "_x" , "_snow", "_parray"];
 
 quake = {
 
@@ -15,16 +17,19 @@ quake = {
 		};
 
 };
+player spawn quake;
 
-
-wind2 = {
-	while {windv} do {
-	setwind [0.201112,0.204166,true];
+if ( player distance [_xpos, _ypos] < radiation_radius * 1.8 ) then
+{
+  _x = 0;
+  while { alive player && _x < 200 } do
+  {
+		setwind [0.201112,0.204166,true];
 		_ran = ceil random 2;
 		_pos = position player;
 
 		//--- Dunst
-			setwind [0.201112*2,0.204166*2,false];
+		setwind [0.201112*2,0.204166*2,false];
 		_velocity = [random 10,random 10,-1];
 		_color = [1.0, 0.9, 0.8];
 		_alpha = 0.02 + random 0.02;
@@ -38,26 +43,8 @@ wind2 = {
 		_delay = 1 + random 5;
 		sleep _delay;
 		deletevehicle _ps;
-	};
+  
+      sleep 3.2;
+	_x = _x + 1;
+  };
 };
-
-
-envi = {
-"colorCorrections" ppEffectAdjust [2, 30, 0, [0.0, 0.0, 0.0, 0.0], [0.8*2, 0.5*2, 0.0, 0.7], [0.9, 0.9, 0.9, 0.0]];
-"colorCorrections" ppEffectCommit 0;
-"colorCorrections" ppEffectAdjust [1, 1, 0, [0.0, 0.0, 0.0, 0.0], [0.8*2, 0.5*2, 0.0, 0.7], [0.9, 0.9, 0.9, 0.0]];
-"colorCorrections" ppEffectAdjust [1, 0.8, -0.001, [0.0, 0.0, 0.0, 0.0], [0.8*2, 0.5*2, 0.0, 0.7], [0.9, 0.9, 0.9, 0.0]];  
-"colorCorrections" ppEffectCommit 1.5;
-"colorCorrections" ppEffectEnable true;
-"filmGrain" ppEffectEnable true; 
-"filmGrain" ppEffectAdjust [0.02, 1, 1, 0.1, 1, false];
-"filmGrain" ppEffectCommit 3;
-};
-
-
-
-player spawn quake;
-
-
-windv=true;
-player spawn wind2;

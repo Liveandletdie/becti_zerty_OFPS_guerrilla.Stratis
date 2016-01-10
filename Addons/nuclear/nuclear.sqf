@@ -26,12 +26,12 @@ _object removeaction _id;
 
 _red = 0;
 _green = 255;
-_k = 2 * (255 / strahlungzeit);
+_k = 2 * (255 / exposure_time);
 
-while { Strahlungzeit >= 0 } do
+while { exposure_time >= 0 } do
 {
-  _m = floor (strahlungzeit / 60);
-  _s = strahlungzeit % 60;
+  _m = floor (exposure_time / 60);
+  _s = exposure_time % 60;
   if ( _m < 10 ) then {_m = format ["0%1", _m]};
   if ( _s < 10 ) then {_s = format ["0%1", _s]};
   _r = [_red, 2] call DEC_TO_HEX;
@@ -49,7 +49,7 @@ while { Strahlungzeit >= 0 } do
     _green = _green - _k;
     if ( _green < 0 ) then {_green = 0};
   };
-  strahlungzeit = strahlungzeit - 1;
+  exposure_time = exposure_time - 1;
 };
 
 _object setdammage 1;

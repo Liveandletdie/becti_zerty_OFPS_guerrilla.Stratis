@@ -74,7 +74,6 @@ if (CTI_SPECIAL_MEDICALVEHICLE in _special) then { //--- Medical vehicle.
 	_marker_type = CTI_P_MarkerPrefix+"med";
 };
 if (CTI_SPECIAL_NUKETRUCK in _special) then { //--- Nuke vehicle.
-	_vehicle addAction ["<t color='#E61616'>Arm Nuke (Cant Stop Once Started)</t>","Addons\nuclear\functions\fn_bombTimer.sqf"];
 	_vehicle call {[_this, 30] execvm "Addons\nuclear\geiger.sqf"};
 };
 /*

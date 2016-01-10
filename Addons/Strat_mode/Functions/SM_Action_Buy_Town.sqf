@@ -11,8 +11,8 @@
 
 		if (_funds > _price) then {
 			[group _caller, CTI_P_SideJoined, - _price] call CTI_CO_FNC_ChangeFunds;
-			_position = [getPos _caller, 1, 5] call CTI_CO_FNC_GetRandomPosition;
-			_position = [_position, 10] call CTI_CO_FNC_GetEmptyPosition;
+			_position = [getPos _caller, 1, 15] call CTI_CO_FNC_GetRandomPosition;
+			_position = [_position, 15] call CTI_CO_FNC_GetEmptyPosition;
 			_direction =[_position, _caller] call CTI_CO_FNC_GetDirTo;
 			_vehicle= [_model, _position, _direction, CTI_P_SideJoined, False, false, false] call CTI_CO_FNC_CreateVehicle;
 			["SERVER", "Request_HandleAction", ["empty", [_vehicle,600]]] call CTI_CO_FNC_NetSend;
