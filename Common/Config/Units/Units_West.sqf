@@ -377,7 +377,7 @@ _o = _o + [CTI_VEHICLES_SALVAGER_PRICE];
 _t = _t + [25];
 _u = _u + [0];
 _f = _f + [CTI_FACTORY_REPAIR];
-_s = _s + [["B_Truck_01_box_F","salvager"]];
+_s = _s + [["B_Truck_01_mover_F","salvager"]];
 
 _c = _c + ['CTI_Salvager_Independent_West'];
 _p = _p + [''];
@@ -386,7 +386,7 @@ _o = _o + [CTI_VEHICLES_SALVAGER_PRICE];
 _t = _t + [25];
 _u = _u + [0];
 _f = _f + [CTI_FACTORY_REPAIR];
-_s = _s + [["B_Truck_01_box_F","salvager-independent"]];
+_s = _s + [["B_Truck_01_mover_F","salvager-independent"]];
 
 _c = _c + ['B_Truck_01_fuel_F'];
 _p = _p + [''];
