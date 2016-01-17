@@ -1,3 +1,5 @@
+private ["_posx", "_posy", "_upposz", "_coef", "_agl", "_dis", "_col", "_upposx", "_upposy", "_coef2"];
+
 _posx = _this select 0
 _posy = _this select 1
 _upposz = _this select 2

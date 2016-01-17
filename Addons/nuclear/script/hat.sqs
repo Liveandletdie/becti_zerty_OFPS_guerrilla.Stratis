@@ -1,3 +1,5 @@
+private ["_posx", "_posy", "_next", "_hatposz", "_hatsize", "_scl", "_hatalfa1", "_hatalfa2", "_col", "_mushflag", "_glaretrans", "_cnt", "_agl", "_velx", "_vely", "_rdm", "_rdm2", "_hatposx1", "_hatposy1", "_hatposx2", "_hatposy2", "_hatposx3", "_hatposy3", "_hatposx4", "_hatposy4", "_hatposx5", "_hatposy5", "_dcol", "_glareagl", "_glareposx", "_glareposy", "_glaretrans"];
+
 _posx = _this select 0
 _posy = _this select 1
 

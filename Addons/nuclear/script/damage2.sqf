@@ -3,7 +3,7 @@ private ["_xpos", "_ypos", "_dis", "_damage", "_x"];
 _xpos = _this select 0;
 _ypos = _this select 1;
 
-for [{_dis = 300}, {_dis <= radiation_radius}, {_dis = _dis + 100}] do
+for [{_dis = 400}, {_dis <= radiation_radius}, {_dis = _dis + 100}] do
 {
   [_xpos, _ypos, _dis] exec "Addons\nuclear\script\wave.sqs";
   if ( damage_on ) then

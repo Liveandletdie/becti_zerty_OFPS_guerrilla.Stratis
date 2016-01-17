@@ -1,3 +1,5 @@
+private ["_posx", "_posy", "_cntmush", "_scl", "_scl2", "_sclsize", "_hatalfa1", "_hatalfa2", "_cnt", "_agl", "_velx", "_vely", "_dis", "_col", "_upposx", "_upposy"];
+
 _posx = _this select 0
 _posy = _this select 1
 

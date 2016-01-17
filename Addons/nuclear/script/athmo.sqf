@@ -1,5 +1,4 @@
-private ["_xpos", "_ypos", "_vx", "_vy", "_vz", "_coe", "_ran", "_pos", "_velocity", "_color", "_alpha", "_ps", "_delay"];
-private ["_xpos", "_ypos", "_x" , "_snow", "_parray"];
+private ["_xpos", "_ypos", "_vx", "_vy", "_vz", "_coe", "_ran", "_pos", "_velocity", "_color", "_alpha", "_ps", "_delay", "_x"];
 
 quake = {
 
@@ -19,7 +18,7 @@ quake = {
 };
 player spawn quake;
 
-if ( player distance [_xpos, _ypos] < radiation_radius * 1.8 ) then
+if ( player distance [_xpos, _ypos] < radiation_radius * 1.5 ) then
 {
   _x = 0;
   while { alive player && _x < 200 } do

@@ -5,9 +5,9 @@ _ypos = _this select 1;
 
 if ( [_xpos, _ypos, 0] distance player < (radiation_radius * 0.7) ) then
 {
-  0 faderadio 0;
-  0 fadesound 0;
-  0 fademusic 0;
+  0 faderadio 0.3;
+  0 fadesound 0.3;
+  0 fademusic 0.3;
 
   sleep 8;
 

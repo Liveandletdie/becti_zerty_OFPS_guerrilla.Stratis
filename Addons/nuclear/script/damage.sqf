@@ -3,9 +3,9 @@ private ["_xpos", "_ypos", "_vehicles", "_units", "_airs", "_objects", "_distanc
 _xpos = _this select 0;
 _ypos = _this select 1;
 
-_wave_radius = radiation_radius * 1.2;
+_wave_radius = radiation_radius * 1.1;
 
-_vehicles = nearestobjects [[_xpos, _ypos , 0], ["Car", "Motorcycle", "Tank", "Air", "Ship"], radiation_radius * 2.9];
+_vehicles = nearestobjects [[_xpos, _ypos , 0], ["Car", "Motorcycle", "Tank", "Air", "Ship"], radiation_radius * 2];
 _objects = nearestobjects [[_xpos, _ypos, 0], [], _wave_radius];
 
 sleep 4;
@@ -16,15 +16,11 @@ sleep 4;
     {_x setdammage 1} foreach (crew _x);
     _x setdammage 1;
   };
-} foreach ([_xpos, _ypos, 0] nearobjects ["All", 200]);
+} foreach ([_xpos, _ypos, 0] nearobjects ["All", 400]);
 
 [_xpos, _ypos] execvm "Addons\nuclear\script\damage2.sqf";
 
-if ( damage_on ) then
-{
-  _airs = nearestobjects [[_xpos, _ypos , 0], ["Air"], radiation_radius];
-} else {
-_airs = main_airs;  };
+_airs = nearestobjects [[_xpos, _ypos , 0], ["Air"], radiation_radius];
 {
   _distance = [_xpos, _ypos, 0] distance _x;
   _dir = asin (((getpos _x select 1) - _ypos) / _distance);
@@ -46,8 +42,7 @@ _airs = main_airs;  };
   if ( ! (_x iskindof "All") ) then {_x setdammage 1}
   else
   {
-    if ( _x iskindof "Man" || _x iskindof "Car" || _x iskindof "Motorcycle" ||
-         _x iskindof "Tank" || _x iskindof "Ship" ) then
+    if ( _x iskindof "Man" || _x iskindof "Car" || _x iskindof "Motorcycle" || _x iskindof "Tank" || _x iskindof "Ship" ) then
     {
       _distance = [_xpos, _ypos, 0] distance _x;
       _dir = asin (((getpos _x select 1) - _ypos) / _distance);

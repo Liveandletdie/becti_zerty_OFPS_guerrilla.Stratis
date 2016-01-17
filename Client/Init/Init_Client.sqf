@@ -90,10 +90,11 @@ CTI_ConstructionCam_DownwardAngle = -0.8;
 MissionIntro = [] spawn {
 		["BIS_blackStart", false] call BIS_fnc_blackOut;
 		playMusic "EventTrack02a_F_EPB";
-		[[["BECTI OFPS EDITION","<t align = 'center' shadow = '1' size = '1.2' font='PuristaBold'>%1</t><br/>"],
+		[[["BECTI - OFPS EDITION","<t align = 'center' shadow = '1' size = '1.2' font='PuristaBold'>%1</t><br/>"],
 		["CAPTURE THE ISLAND","<t align = 'center' shadow = '1' size = '1' font='PuristaBold'>%1</t><br/>"],
-		["Your objective is to capture enemy towns and destroy enemy facilities.","<t align = 'center' shadow = '1' size = '0.7'>%1</t><br/>"],
-		["To leave the tutorial, simply press ~ on the wreck and select exit tutorial.","<t align = 'center' shadow = '1' size = '0.7'>%1</t><br/>"]],0,0,"<t color='#FFFFFFFF' align='center'>%1</t>"] spawn BIS_fnc_typeText;
+		["GUERRILLA WARFARE MODE","<t align = 'center' shadow = '1' size = '0.8' font='PuristaBold'>%1</t><br/>"],
+		["Capture Enemy Towns and Destroy Enemy Facilities To Win.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
+		["To leave tutorial, Press ( ~ ) on the wreck and select exit tutorial.","<t align = 'center' shadow = '1' size = '0.4'>%1</t><br/>"]],0,0,"<t color='#FFFFFFFF' align='center'>%1</t>"] spawn BIS_fnc_typeText;
 		sleep 30;
 		["BIS_blackStart", true] call BIS_fnc_blackIn;
 };

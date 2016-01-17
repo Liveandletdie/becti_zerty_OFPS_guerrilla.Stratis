@@ -1,3 +1,5 @@
+private ["_posx", "_posy", "_posz", "_array", "_x"];
+
 _posx = _this select 0;
 _posy = _this select 1;
 _posz = _this select 2;
