@@ -1,6 +1,7 @@
 
 exposure_time = 360;
 damage_on = true;
+radiation_on = false;
 radiation_radius = 800;
 main_nuclear_blow_speed = 170;
 main_nuclear_half_life = 10 * 30;

@@ -27,6 +27,8 @@ for [{_dis = 400}, {_dis <= radiation_radius}, {_dis = _dis + 100}] do
   } foreach ([_xpos, _ypos, 0] nearobjects ["All", _dis]);
 };
 
-
-[_xpos, _ypos, time] execvm "Addons\nuclear\script\geiger.sqf";
-[_xpos, _ypos, time] execvm "Addons\nuclear\script\radiation.sqf";
+if ( radiation_on ) then
+{
+	[_xpos, _ypos, time] execvm "Addons\nuclear\script\geiger.sqf";
+	[_xpos, _ypos, time] execvm "Addons\nuclear\script\radiation.sqf";
+};
