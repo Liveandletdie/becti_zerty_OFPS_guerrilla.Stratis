@@ -61,7 +61,7 @@ _placements = [];
 _specials = [];
 
 _headers = _headers 		+ [[CTI_MILITARYINSTALLATION, "Military Installation", "Military Installation"]];
-_classes =  _classes 		+ [["Land_Cargo_Tower_V3_F", "Land_Cargo_Tower_V3_ruins_F"]];
+_classes =  _classes 		+ [["Land_Research_house_V1_F", "Land_Research_house_V1_ruins_F"]];
 _prices =  _prices 			+ [CTI_MILITARY_INSTALLATION_PRICE];
 _times =  _times 			+ [1];
 _placements =_placements 	+ [[180, 15]];
