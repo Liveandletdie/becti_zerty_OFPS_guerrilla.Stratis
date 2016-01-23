@@ -234,8 +234,8 @@ _positions = [];
 	//diag_log _x;
 
 	if (_value > 500) then {
-		_position = [getPos _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE] call CTI_CO_FNC_GetRandomPositionWater;
-		_position = [_position, 50] call CTI_CO_FNC_GetEmptyPositionWater;
+		_position = [getPos _town, 150, CTI_TOWNS_OCCUPATION_SPAWN_RANGE] call CTI_CO_FNC_GetRandomPositionWater;
+		_position = [_position, 75] call CTI_CO_FNC_GetEmptyPositionWater;
 		_positions pushBack _position;
 		} else {
 		_position = [getPos _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE] call CTI_CO_FNC_GetRandomPosition;
