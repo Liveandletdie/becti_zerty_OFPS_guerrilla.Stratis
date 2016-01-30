@@ -93,7 +93,7 @@ class Params {
 		title = "RESPAWN: FOB Range";
 		values[] = {-1,500,750,1000,1250,1500,1750,2000};
 		texts[] = {"FOB Disabled","0.50 KM","0.75 KM","1 KM","1.25 KM","1.5 KM","1.75 KM","2 KM"};
-		default = 1500;
+		default = 2000;
 	};
 	class CTI_RESPAWN_MOBILE {
 		title = "RESPAWN: Mobile";
@@ -203,7 +203,7 @@ class Params {
 		title = "Zerty: Perf: HeadLess Client Mode";
 		values[] = {0,1,2};
 		texts[] = {"Towns:Server + HCs | patrols:HCs","Towns : HCs |  Patrols : HCs","Towns : Server |  Patrols : HCs"};
-		default = 2;
+		default = 1;
 	};
 	class CACHE_EMPTY {
 		title = "Zerty: Perf: PhysX Caching System";

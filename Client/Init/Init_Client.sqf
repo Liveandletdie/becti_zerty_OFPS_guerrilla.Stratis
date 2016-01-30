@@ -95,7 +95,7 @@ MissionIntro = [] spawn {
 		["GUERRILLA WARFARE MODE","<t align = 'center' shadow = '1' size = '0.8' font='PuristaBold'>%1</t><br/>"],
 		["Capture Enemy Towns and Destroy Enemy Facilities To Win.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
 		["To leave tutorial, Press ( ~ ) on the wreck and select exit tutorial.","<t align = 'center' shadow = '1' size = '0.4'>%1</t><br/>"]],0,0,"<t color='#FFFFFFFF' align='center'>%1</t>"] spawn BIS_fnc_typeText;
-		sleep 30;
+		sleep 25;
 		["BIS_blackStart", true] call BIS_fnc_blackIn;
 };
 waitUntil {scriptDone MissionIntro};

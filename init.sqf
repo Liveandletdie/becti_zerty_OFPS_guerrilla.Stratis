@@ -127,6 +127,7 @@ if (CTI_IsHeadless) then {
 
 	execVM "Client\Init\Init_Client_Headless.sqf";
 };
+[true,1,false,true,1,0,true,[]] execVM "WerthlesHeadless.sqf";
 
 //--- Set the group ID
 
@@ -140,6 +141,16 @@ _igiload = execVM "IgiLoad\IgiLoadInit.sqf";
 
 //--Drag Crates script
 _logistic = execVM "=BTC=_logistic\=BTC=_logistic_Init.sqf";
+
+//---Fast Rope script 
+waitUntil {time > 0};
+execVM "Addons\fast_rope\SHK_Fastrope.sqf";
+waitUntil {!isNil "FastropeInitialized"};
+
+//---Jump Script
+waitUntil {time > 0};
+execVM "Addons\jump.sqf";
+waitUntil {!isNil "JumpInitialized"};
 
 //-- Explosives on Vehicles Script
 waitUntil {time > 0};

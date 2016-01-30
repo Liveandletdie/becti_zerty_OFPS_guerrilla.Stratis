@@ -419,14 +419,14 @@ _u = _u + [0];
 _f = _f + [CTI_FACTORY_AMMO];
 _s = _s + ["service-ammotruck"];
 
-_c = _c + ['B_supplyCrate_F'];
+_c = _c + ["B_supplyCrate_F"];
 _p = _p + [''];
-_n = _n + [''];
-_o = _o + [50];
-_t = _t + [10];
+_n = _n + ['Mobile Gear access Crate'];
+_o = _o + [2000];
+_t = _t + [15];
 _u = _u + [0];
-_f = _f + [CTI_FACTORY_AMMO];
-_s = _s + [""];
+_f = _f + [CTI_FACTORY_BARRACKS];
+_s = _s + ["service-gear"];
 
 
 

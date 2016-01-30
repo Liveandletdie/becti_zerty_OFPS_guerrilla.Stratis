@@ -9,7 +9,6 @@ if (CTI_isCLient) then {
 	CTI_NUKE_DETONATION = compileFinal preprocessFileLineNumbers "Addons\nuclear\detonation.sqf";
 	CTI_NUKE_GEIGER = compileFinal preprocessFileLineNumbers "Addons\nuclear\geiger.sqf";
 	CTI_NUKE_NUCLEAR = compileFinal preprocessFileLineNumbers "Addons\nuclear\nuclear.sqf";
-	CTI_NUKE_NUKE1 = compileFinal preprocessFileLineNumbers "Addons\nuclear\Nuke1.sqf";
 	CTI_NUKE_RADIATION = compileFinal preprocessFileLineNumbers "Addons\nuclear\radiation.sqf";
 
 };

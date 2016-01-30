@@ -1111,10 +1111,10 @@ _i = _i		+ ["muzzle_snds_M"];
 _u = _u		+ [2];
 _p = _p		+ [1000];
 
-/*_i = _i		+ ["optic_arco"];
-_u = _u		+ [1];
-_p = _p		+ [500];
-
+_i = _i		+ ["optic_arco"];
+_u = _u		+ [3];
+_p = _p		+ [750];
+/*
 _i = _i		+ ["optic_Hamr"];
 _u = _u		+ [1];
 _p = _p		+ [500];*/
@@ -1123,9 +1123,9 @@ _i = _i		+ ["optic_Holosight"];
 _u = _u		+ [1];
 _p = _p		+ [200];
 
-/*_i = _i		+ ["optic_MRCO"];
-_u = _u		+ [1];
-_p = _p		+ [500];*/
+_i = _i		+ ["optic_MRCO"];
+_u = _u		+ [2];
+_p = _p		+ [500];
 
 _i = _i		+ ["optic_Aco"];
 _u = _u		+ [1];
