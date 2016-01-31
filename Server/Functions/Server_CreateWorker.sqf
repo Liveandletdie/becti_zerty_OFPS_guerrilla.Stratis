@@ -50,6 +50,7 @@ _group = createGroup _side;
 _group setSpeedMode "LIMITED";
 
 _model = missionNamespace getVariable format["CTI_%1_Worker", _side];
+
 if (isNil '_model') then {_model = "C_man_1"};
 if (typeName _model == "ARRAY") then {_model = _model select floor(random count _model)};
 
