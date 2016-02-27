@@ -1,4 +1,4 @@
-private ["_time", "_object", "_target", "_nukearmtimeset", "_nukeblowset", "_time_differencem"];
+private ["_time", "_object", "_target", "nukearmtime", "nukeblowtime", "_time_difference"];
 
 cutText ["BOMB ARMED", "PLAIN DOWN"];
 

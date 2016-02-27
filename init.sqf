@@ -127,7 +127,8 @@ if (CTI_IsHeadless) then {
 
 	execVM "Client\Init\Init_Client_Headless.sqf";
 };
-[true,1,false,true,1,0,true,[]] execVM "WerthlesHeadless.sqf";
+//---Werthles Headless Kit v2.3
+[true,30,false,true,30,3,true,["C_scientist_F"]] execVM "server\functions\WerthlesHeadless.sqf";
 
 //--- Set the group ID
 

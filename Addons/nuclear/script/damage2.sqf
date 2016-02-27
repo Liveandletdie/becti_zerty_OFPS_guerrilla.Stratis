@@ -8,7 +8,7 @@ for [{_dis = 400}, {_dis <= radiation_radius}, {_dis = _dis + 100}] do
   [_xpos, _ypos, _dis] exec "Addons\nuclear\script\wave.sqs";
   if ( damage_on ) then
   {
-    if ( _dis < 800 ) then {[_xpos, _ypos, _dis] execvm "Addons\nuclear\script\noise.sqf"};
+    if ( _dis < 2000 ) then {[_xpos, _ypos, _dis] execvm "Addons\nuclear\script\noise.sqf"};
   };
   {
     if ( ! (_x iskindof "Land_nav_pier_m_2") ) then

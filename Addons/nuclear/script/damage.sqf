@@ -3,7 +3,7 @@ private ["_xpos", "_ypos", "_vehicles", "_units", "_airs", "_objects", "_distanc
 _xpos = _this select 0;
 _ypos = _this select 1;
 
-_wave_radius = radiation_radius * 1.1;
+_wave_radius = radiation_radius * 1;
 
 _vehicles = nearestobjects [[_xpos, _ypos , 0], ["Car", "Motorcycle", "Tank", "Air", "Ship"], radiation_radius * 2];
 _objects = nearestobjects [[_xpos, _ypos, 0], [], _wave_radius];

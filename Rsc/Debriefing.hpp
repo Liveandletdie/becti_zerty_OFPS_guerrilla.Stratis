@@ -2,25 +2,25 @@ class CfgDebriefing {
 	class End1 {
 		title = "Mission Completed";
 		subtitle = "";
-		description = "We won! Enemy have lost all facilities!";
+		description = "We won! Enemy have lost all facilities or we capture more towns!";
 		pictureBackground = "";
 	};
 	class End2 {
 		title = "Mission Failed";
 		subtitle = "";
-		description = "We lost! Our HQ is destroyed, and we dont have anymore factories!";
+		description = "We lost! We lost our bases or the enemy captured more towns!";
 		pictureBackground = "";
 	};
 	class End3 {
 		title = "Mission Completed";
 		subtitle = "";
-		description = "We won! We capped enougth towns to assure victory!";
+		description = "We won! We capped enough towns to assure victory!";
 		pictureBackground = "";
 	};
 	class End4 {
 		title = "Mission Failed";
 		subtitle = "";
-		description = "We lost! The enemy has captured enougth towns to hold the island!";
+		description = "We lost! The enemy has captured enough towns to hold the island!";
 		pictureBackground = "";
 	};
 	class End5 {
