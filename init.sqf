@@ -34,7 +34,6 @@ CTI_Init_Strat=false;
 CTI_IsHostedServer = if (isServer && !isDedicated) then {true} else {false};
 CTI_IsServer = if (isDedicated || CTI_IsHostedServer) then {true} else {false};
 CTI_IsClient = if (CTI_IsHostedServer || !isDedicated) then {true} else {false};
-CTI_IsHeadless = if !(hasInterface || isDedicated) then {true} else {false};
 
 CTI_TEAMSTACK_EAST=0;
 CTI_TEAMSTACK_WEST=0;
@@ -42,7 +41,7 @@ CTI_TEAMSTACK_WEST=0;
 
 if (CTI_Log_Level >= CTI_Log_Information) then { //--- Information
 	["INFORMATION", "FILE: init.sqf", format["Environment is Multiplayer? [%1]", isMultiplayer]] call CTI_CO_FNC_Log;
-	["INFORMATION", "FILE: init.sqf", format["Current Actor is: Hosted Server [%1]? Dedicated [%2]? Client [%3]? Headless [%4]?", CTI_IsHostedServer, isDedicated, CTI_IsClient, CTI_IsHeadless]] call CTI_CO_FNC_Log
+	["INFORMATION", "FILE: init.sqf", format["Current Actor is: Hosted Server [%1]? Dedicated [%2]? Client [%3]?", CTI_IsHostedServer, isDedicated, CTI_IsClient]] call CTI_CO_FNC_Log
 };
 
 
@@ -113,7 +112,7 @@ if (CTI_IsServer) then {
 };
 
 //--- Pure client execution
-if (CTI_IsClient && !CTI_IsHeadless) then {
+if (CTI_IsClient) then {
 	if (CTI_Log_Level >= CTI_Log_Information) then { ["INFORMATION", "FILE: init.sqf", "Running client initialization"] call CTI_CO_FNC_Log	};
 
 	//waitUntil {!(isNull player)};
@@ -121,14 +120,8 @@ if (CTI_IsClient && !CTI_IsHeadless) then {
 	execVM "Client\Init\Init_Client.sqf";
 };
 
-//--- Headless client execution
-if (CTI_IsHeadless) then {
-	if (CTI_Log_Level >= CTI_Log_Information) then { ["INFORMATION", "FILE: init.sqf", "Running headless client initialization"] call CTI_CO_FNC_Log };
-
-	execVM "Client\Init\Init_Client_Headless.sqf";
-};
 //---Werthles Headless Kit v2.3
-[true,30,false,true,30,3,true,["C_scientist_F"]] execVM "server\functions\WerthlesHeadless.sqf";
+[true,1,false,true,1,1,true,["C_scientist_F"]] execVM "server\functions\WerthlesHeadless.sqf";
 
 //--- Set the group ID
 
