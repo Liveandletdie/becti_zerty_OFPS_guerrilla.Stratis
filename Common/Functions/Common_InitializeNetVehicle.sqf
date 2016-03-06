@@ -88,6 +88,10 @@ if (_vehicle isKindOf "Plane") then {
 };
 */
 
+//--- Static Line Drop
+if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {
+	_vehicle addAction ["<t color='#2E9AFE'>Eject With Parachute</t>", "Addons\eject.sqs",[],0,true,true,"","player in _target && getPos _target select 2 >100"];
+};
 
 //--- Get a proper icon
 if (_marker_type == "") then {
